@@ -1,0 +1,177 @@
+:root {
+  /* 1. COLORS ==============  */
+
+  --ui-white: white;
+
+  --ui-neutral-100: #f8f8f9;
+  --ui-neutral-200: #f3f4f5;
+  --ui-neutral-300: #e5e7eb;
+  --ui-neutral-400: #88909b;
+  --ui-neutral-500: #6b7280;
+  --ui-neutral-600: #101927;
+
+  --ui-primary-100: #f2f7ff;
+  --ui-primary-100__invert: #035ae1;
+  --ui-primary-200: #1973fe;
+  --ui-primary-200__invert: white;
+  --ui-primary-300: #035ae1;
+  --ui-primary-300__invert: white;
+
+  --ui-secondary-100: #cce0ff;
+  --ui-secondary-100__invert: #035ae1;
+  --ui-secondary-200: #035ae1;
+  --ui-secondary-200__invert: white;
+
+  --ui-success-100: #2fc68d;
+
+  --ui-warning-100: #fff8e6;
+  --ui-warning-200: #ffb000;
+
+  --ui-danger-100: #ffebeb;
+  --ui-danger-100__invert: #db4848;
+  --ui-danger-200: #db4848;
+  --ui-danger-200__invert: white;
+  --ui-danger-300: #cc3d3d;
+  --ui-danger-300__invert: white;
+
+  /* 2. SHADOWS ==============  */
+
+  --ui-shadow-large: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+
+  /* 3. FONT ================= */
+
+  --ui-font-family: 'Poppins', sans-serif;
+
+  /* 4. TRANSITIONS ========== */
+  
+  --ui-btn-transition: .2s all;
+
+  /* 5. COMPONENT SETTINGS === */
+
+  --ui-component-background: white;
+  --ui-component-padding: 24px;
+  --ui-component-radius: 5px;
+  --ui-component-shadow: none;
+}
+
+body {
+  font-family: var(--ui-font-family);
+
+  /* @todo: remove this */
+  background: #f3f5f7;
+}
+
+/* 1. BUTTONS ================ */
+
+.ui-btn {
+  padding: 11px 32px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  border: none;
+  cursor: pointer;
+  border: 1px solid;
+  transition: var(--ui-btn-transition);
+}
+
+/* 1.1 PRIMARY */
+
+.ui-btn--primary {
+  color: var(--ui-primary-200__invert);
+  background: var(--ui-primary-200);
+}
+
+.ui-btn--primary:hover,
+.ui-btn--primary:focus {
+  color: var(--ui-primary-300__invert);
+  background: var(--ui-primary-300);
+}
+
+.ui-btn--primary-outline {
+  color: var(--ui-primary-200);
+  background: var(--ui-primary-100);
+}
+
+.ui-btn--primary-outline:hover,
+.ui-btn--primary-outline:focus {
+  color: var(--ui-primary-300__invert);
+  background: var(--ui-primary-300);
+}
+
+/* 1.2 DANGER */
+
+.ui-btn--danger {
+  color: var(--ui-danger-200__invert);
+  background: var(--ui-danger-200);
+}
+
+.ui-btn--danger:hover,
+.ui-btn--danger:focus {
+  color: var(--ui-danger-300__invert);
+  background: var(--ui-danger-300);
+}
+
+.ui-btn--danger-outline {
+  color: var(--ui-danger-200);
+  background: var(--ui-danger-100);
+}
+
+.ui-btn--danger-outline:hover,
+.ui-btn--danger-outline:focus {
+  color: var(--ui-danger-300__invert);
+  background: var(--ui-danger-300);
+}
+
+/* 1.3 BTN ICON  */
+
+.ui-btn--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ui-btn--icon .ui-btn__icon:last-child {
+  margin-left: 8px;
+}
+
+.ui-btn--icon .ui-btn__icon:first-child {
+  margin-right: 8px;
+}
+
+/* 2. TAGS */
+
+.ui-tag {
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  text-align: left;
+  background: var(--ui-secondary-100);
+  color: var(--ui-secondary-100__invert);
+  border: 1px solid var(--ui-secondary-100);
+  border-radius: 10rem;
+  padding: 6px 18px;
+}
+
+.ui-tag--outline {
+  background: transparent;
+  color: var(--ui-secondary-200);
+  border-color: var(--ui-secondary-200);
+}
+
+/* 3. HEADLINES  */
+
+.ui-h2 {
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+}
