@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../normalization.css">
+  <link rel="stylesheet" href="../../root.css">
+  <link rel="stylesheet" href="./app.css">
+
+  <style>
+    .webappui-component-wrapper {
+      max-width: 854px;
+      margin: 100px auto;
+    }
+  </style>
+  <title>Component 03</title>
+</head>
+
+<body>
+
+  <div class="webappui-component-wrapper">
+    <div class="ui-select-03">
+      <div class="ui-select-03__component-head">
+        <h2 class="ui-select-03__heading">
+          Connected Apps
+        </h2>
+        <p class="ui-select-03__paragraph">
+          You can manage and customize your connecte apps in one place.
+        </p>
+      </div>
+      <div class="ui-select-03__items-container">
+        <div class="ui-select-03__item">
+          <div class="ui-select-03__card">
+            <div class="ui-select-03__card__head">
+              <div class="ui-select-03__card__logo-container">
+                <img class="ui-select-03__card__logo" src="../../images/Jira.svg">
+              </div>
+              <span class="ui-switch">
+                <input type="checkbox" class="ui-switch" id="switch-normal-1">
+                <label for="switch-normal-1" class="m-0"></label>
+              </span>
+            </div>
+            <div class="ui-select-03__card__body">
+              <h4 class="ui-select-03__card__heading">
+                JIRA
+              </h4>
+              <p class="ui-select-03__card__paragraph">
+                The #1 software development Tool used by agile teams.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-select-03__item">
+          <div class="ui-select-03__card">
+            <div class="ui-select-03__card__head">
+              <div class="ui-select-03__card__logo-container">
+                <img class="ui-select-03__card__logo" src="../../images/airtable.svg">
+              </div>
+              <span class="ui-switch">
+                <input type="checkbox" class="ui-switch" id="switch-normal-3">
+                <label for="switch-normal-3" class="m-0"></label>
+              </span>
+            </div>
+            <div class="ui-select-03__card__body">
+              <h4 class="ui-select-03__card__heading">
+                Airtable
+              </h4>
+              <p class="ui-select-03__card__paragraph">
+                Low-code platform for building collaborative apps.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-select-03__item">
+          <div class="ui-select-03__card">
+            <div class="ui-select-03__card__head">
+              <div class="ui-select-03__card__logo-container">
+                <img class="ui-select-03__card__logo" src="../../images/Dropbox.svg">
+              </div>
+              <span class="ui-switch">
+                <input type="checkbox" class="ui-switch" id="switch-normal-2">
+                <label for="switch-normal-2" class="m-0"></label>
+              </span>
+            </div>
+            <div class="ui-select-03__card__body">
+              <h4 class="ui-select-03__card__heading">
+                Dropbox
+              </h4>
+              <p class="ui-select-03__card__paragraph">
+                Everything you need for work, all in one place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.ui-select-03__card input.ui-switch').forEach(function (switchInput) {
+        var switchCard = switchInput.closest('.ui-select-03__card')
+        switchInput.onchange = function (event) {
+          if (switchInput.checked) {
+            switchCard.classList.add('ui-select-03__card--active')
+          } else {
+            switchCard.classList.remove('ui-select-03__card--active')
+          }
+        }
+      })
+    </script>
+  </div>
+
+</body>
+
+</html>

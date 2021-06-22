@@ -1,0 +1,112 @@
+.ui-select-03 {
+  background: var(--ui-component-background);
+  padding: var(--ui-component-padding);
+  border-radius: var(--ui-component-radius);
+  box-shadow: var(--ui-component-shadow);
+  color: var(--ui-neutral-600);
+}
+
+.ui-select-03__component-head {
+  /* text-align: center */
+}
+
+.ui-select-03__heading {
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+}
+
+.ui-select-03__paragraph {
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--ui-neutral-400);
+  margin: 0;
+}
+
+.ui-select-03__items-container {
+  display: flex;
+  flex-wrap: wrap;
+  --ui-select-03__items-container--margin-end: 24px;
+  width: calc(100% + var(--ui-select-03__items-container--margin-end));
+  margin-right: calc(-1 * var(--ui-select-03__items-container--margin-end));
+}
+
+.ui-select-03__item {
+  flex: 0 0 auto;
+  width: calc(calc(100% / 3) - var(--ui-select-03__items-container--margin-end));
+  margin-right: var(--ui-select-03__items-container--margin-end);
+  margin-top: var(--ui-select-03__items-container--margin-end);
+  display: flex;
+  position: relative;
+}
+
+.ui-select-03__item:nth-child(3n+0) {
+  margin-right: 0;
+}
+
+.ui-select-03__card {
+  width: 100%;
+  padding: 25px;
+  border: 1px solid var(--ui-neutral-300);
+  border-radius: 5px;
+  transition: .2s all;
+}
+
+.ui-select-03__card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.ui-select-03__card__logo-container {
+  width: 54px;
+  height: 54px;
+  border-radius: 10rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-select-03__card__logo {
+  max-width: 27px;
+  max-height: 27px;
+  width: 100%;
+  filter: grayscale(1);
+  opacity: .7;
+  transition: .2s all;
+}
+
+.ui-select-03__card--active .ui-select-03__card__logo {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.ui-select-03__card__heading {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+}
+
+.ui-select-03__card__paragraph {
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--ui-neutral-400);
+}
