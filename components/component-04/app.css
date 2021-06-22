@@ -1,0 +1,150 @@
+.ui-notification {
+  display: flex;
+  background: var(--ui-white);
+  max-width: 400px;
+  width: 100%;
+  position: fixed;
+  --ui-notification__margin: 30px;
+  right: var(--ui-notification__margin);
+  top: var(--ui-notification__margin);
+  border-radius: 5px;
+  box-shadow: var(--ui-shadow-300);
+  overflow: hidden;
+  animation: uiShowNotificationAnimation .7s;
+}
+
+@keyframes uiShowNotificationAnimation {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(70%);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ui-notification--close {
+  animation: uiCloseNotificationAnimation .7s;
+}
+
+@keyframes uiCloseNotificationAnimation {
+  from {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30%);
+  }
+}
+
+.ui-notification--bottom-right {
+  top: auto;
+  right: var(--ui-notification__margin);
+  bottom: var(--ui-notification__margin);
+}
+
+.ui-notification--top-left {
+  right: auto;
+  left: var(--ui-notification__margin);
+  top: var(--ui-notification__margin);
+}
+
+.ui-notification--bottom-left {
+  top: auto;
+  left: var(--ui-notification__margin);
+  bottom: var(--ui-notification__margin);
+}
+
+.ui-notification__icon {
+  width: 34px;
+  min-width: 34px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-notification__icon .ui-notification__icon__warning,
+.ui-notification__icon .ui-notification__icon__success,
+.ui-notification__icon .ui-notification__icon__danger {
+  display: none;
+} 
+
+.ui-notification--warning .ui-notification__icon {
+  background: var(--ui-warning-200);
+  color: var(--ui-warning-200__invert);
+}
+
+.ui-notification--warning .ui-notification__icon__warning {
+  display: block;
+}
+
+.ui-notification--success .ui-notification__icon {
+  background: var(--ui-success-100);
+  color: var(--ui-success-100__invert);
+}
+
+.ui-notification--success .ui-notification__icon__success {
+  display: block;
+}
+
+.ui-notification--danger .ui-notification__icon {
+  background: var(--ui-danger-200);
+  color: var(--ui-danger-200__invert);
+}
+
+.ui-notification--danger .ui-notification__icon__danger {
+  display: block;
+}
+
+.ui-notification__content {
+  padding: 23px 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-notification__headline {
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+}
+
+.ui-notification__text {
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: var(--ui-neutral-400);
+}
+
+.ui-notification__close {
+  font-size: 16px;
+  color: var(--ui-neutral-400);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background: none;
+  padding: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.ui-notification__close:hover,
+.ui-notification__close:focus {
+  color: var(--ui-neutral-500);
+}

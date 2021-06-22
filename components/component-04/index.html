@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../normalization.css">
+  <link rel="stylesheet" href="../../root.css">
+  <link rel="stylesheet" href="./app.css">
+
+  <style>
+    .webappui-component-wrapper {
+      margin: 100px auto;
+    }
+  </style>
+  <title>Component 03</title>
+</head>
+
+<body>
+
+  <div>
+    <h2 class="ui-h2">Notifications</h2>
+    <button
+      onclick="uiNotify({ type: 'success', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--primary-outline">Click To Open</button>
+
+    <h2 class="ui-h2">4 Positions</h2>
+    <button
+      onclick="uiNotify({ type: 'success', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--primary-outline">Top Right</button>
+    <button
+      onclick="uiNotify({ type: 'success', position: 'bottom-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--primary-outline">Bottom Right</button>
+    <button
+      onclick="uiNotify({ type: 'success', position: 'top-left', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--primary-outline">Top Left</button>
+    <button
+      onclick="uiNotify({ type: 'success', position: 'bottom-left', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--primary-outline">Bottom Left</button>
+
+    <h2 class="ui-h2">3 Stats</h2>
+    <button
+      onclick="uiNotify({ type: 'success', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--success">Success</button>
+    <button
+      onclick="uiNotify({ type: 'danger', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--danger">danger</button>
+    <button
+      onclick="uiNotify({ type: 'warning', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--warning">Warning</button>
+  </div>
+  <div class="webappui-component-wrapper">
+    <script>
+      function uiCloseNotification(e) {
+        var customNotification
+        if (e.classList && e.classList.contains('ui-notification')) {
+          customNotification = e
+        } else {
+          customNotification = e.target.closest('.ui-notification')
+        }
+
+        customNotification.classList.add('ui-notification--close')
+      }
+
+      function uiRemoveNotification(e) {
+        var customNotification = e.target
+
+        if (customNotification.classList.contains('ui-notification--close')) {
+          customNotification.parentNode.remove()
+        }
+      }
+
+      function uiNotify(options) {
+        var html = `
+          <div class="ui-notification ui-notification--`+ options.type + ` ui-notification--` + options.position + `"
+            onanimationend="uiRemoveNotification(event)">
+            <div class="ui-notification__icon">
+              <span class="ui-notification__icon__success">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+              <span class="ui-notification__icon__warning">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" height="1em"
+                  width="1em" fill="currentColor">
+                  <g>
+                    <rect fill="none" height="24" width="24" />
+                    <path
+                      d="M12,3.19l7,3.11V11c0,4.52-2.98,8.69-7,9.93C7.98,19.69,5,15.52,5,11V6.3L12,3.19 M12,1L3,5v6c0,5.55,3.84,10.74,9,12 c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M11,7h2v2h-2V7z M11,11h2v6h-2V11z" />
+                  </g>
+                </svg>
+              </span>
+              <span class="ui-notification__icon__danger">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" height="1em"
+                  width="1em" fill="currentColor">
+                  <g>
+                    <rect fill="none" height="24" width="24" />
+                    <path
+                      d="M12,3.19l7,3.11V11c0,4.52-2.98,8.69-7,9.93C7.98,19.69,5,15.52,5,11V6.3L12,3.19 M12,1L3,5v6c0,5.55,3.84,10.74,9,12 c5.16-1.26,9-6.45,9-12V5L12,1L12,1z M11,7h2v2h-2V7z M11,11h2v6h-2V11z" />
+                  </g>
+                </svg>
+              </span>
+            </div>
+            <div class="ui-notification__content">
+              <span class="ui-notification__headline">
+                `+ options.headline + `
+              </span>
+              <span class="ui-notification__text">
+                `+ options.text + `
+              </span>
+            </div>
+            <button class="ui-notification__close" onclick="uiCloseNotification(event)">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+              </svg>
+            </button>
+          </div>
+        `
+        var div = document.createElement('div')
+        div.classList.add('ui-notification-container')
+        div.innerHTML = html
+
+        document.body.appendChild(div)
+
+        if (options.autoCloseAfter && typeof options.autoCloseAfter === "number" && options.autoCloseAfter > 0) {
+          setTimeout(function () {
+            closeNotification(div.firstElementChild)
+          }, options.autoCloseAfter);
+        }
+      }
+    </script>
+  </div>
+
+</body>
+
+</html>
