@@ -27,6 +27,7 @@
 }
 
 .ui-notification--close {
+  pointer-events: none;
   animation: uiCloseNotificationAnimation .7s;
 }
 
