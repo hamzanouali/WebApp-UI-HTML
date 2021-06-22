@@ -52,6 +52,10 @@
     <button
       onclick="uiNotify({ type: 'warning', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
       class="ui-btn ui-btn--warning">Warning</button>
+    <h2 class="ui-h2">Timing</h2>
+    <button
+      onclick="uiNotify({ autoCloseAfter: 2000, type: 'success', position: 'top-right', headline: 'Backup migration', text: 'Configuration saved successfully!' })"
+      class="ui-btn ui-btn--primary-outline">Close after 2s</button>
   </div>
   <div class="webappui-component-wrapper">
     <script>
@@ -130,7 +134,7 @@
 
         if (options.autoCloseAfter && typeof options.autoCloseAfter === "number" && options.autoCloseAfter > 0) {
           setTimeout(function () {
-            closeNotification(div.firstElementChild)
+            uiCloseNotification(div.firstElementChild)
           }, options.autoCloseAfter);
         }
       }
