@@ -74,6 +74,8 @@
   display: flex;
   flex-direction: column;
   padding: 23px 24px;
+  max-width: 350px;
+  margin-right: 120px;
 }
 
 .ui-action-toast__headline {
@@ -114,6 +116,7 @@
   line-height: 1.54;
   letter-spacing: normal;
   text-align: left;
+  text-decoration: none;
   color: var(--ui-primary-200);
   cursor: pointer;
   transition: .2s all;
@@ -123,6 +126,9 @@
   outline: none;
   box-shadow: none;
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: calc(50% - 1px); /* 1px: for the border bottom */
   border-bottom: 1px solid var(--ui-neutral-300);
 }
@@ -140,6 +146,7 @@
   line-height: 1.54;
   letter-spacing: normal;
   text-align: left;
+  text-decoration: none;
   color: var(--ui-neutral-400);
   cursor: pointer;
   transition: .2s all;
@@ -149,6 +156,9 @@
   outline: none;
   box-shadow: none;
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: calc(50%);
 }
 

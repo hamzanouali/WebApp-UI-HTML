@@ -29,7 +29,7 @@
       document.querySelector('[data-open-undo-toast="1"]').onclick = async (e) => {
         var value = await uiOpenUndoToast({ text: 'Configuration saved successfully!', buttonText: 'Undo' })
         if (value) {
-          uiOpenUndoToast({ text: 'Configuration reverted successfully!', buttonText: 'OK' })
+          uiOpenUndoToast({ text: 'Reverted successfully!', buttonText: 'OK' })
         }
       }
     </script>

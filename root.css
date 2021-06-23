@@ -61,7 +61,7 @@
 
 body {
   font-family: var(--ui-font-family);
-
+  color: var(--ui-neutral-600);
   /* @todo: remove this */
   background: #f3f5f7;
 }
@@ -307,4 +307,268 @@ body {
 }
 .ui-switch + .ui-switch {
   margin-left: 1em;
+}
+
+/* 5. INPUTS */
+
+/* 5.1 SIMPLE-INPUT */
+
+.ui-simple-input {
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-simple-input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-simple-input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-simple-input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-simple-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+/* 5.2 SMALL-LABEL-INPUT */
+
+.ui-small-label-input {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.ui-small-label-input__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-small-label-input__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-small-label-input__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-small-label-input__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-small-label-input__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+.ui-small-label-input__label {
+  position: absolute;
+  left: 17px;
+  top: -8px;
+  color: var(--ui-neutral-400);
+  background: var(--ui-white);
+  padding: 0 3px;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  transition: .2s all;
+}
+
+.ui-small-label-input:focus-within .ui-small-label-input__label {
+  color: var(--ui-primary-200);
+}
+
+/* 5.3 SMALL-LABEL-INPUT */
+
+.ui-normal-label-input {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.ui-normal-label-input__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-normal-label-input__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-normal-label-input__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-normal-label-input__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-normal-label-input__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+.ui-normal-label-input__label {
+  color: var(--ui-neutral-400);
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+  transition: .2s all;
+}
+
+.ui-normal-label-input:focus-within .ui-normal-label-input__label {
+  color: var(--ui-primary-200);
+}
+
+/* 6.1 NORMAL-SELECT */
+
+.ui-simple-select {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.ui-simple-select__select {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 25px 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.ui-simple-select__select:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-simple-select__icon {
+  position: absolute;
+  inset: 1px;
+  left: auto;
+  background: var(--ui-white);
+  padding: 11px 17px 11px 0;
+  border-radius: 5px;
+  color: inherit;
+  pointer-events: none;
+  transition: .2s all;
+}
+
+.ui-simple-select:focus-within .ui-simple-select__icon {
+  color: var(--ui-primary-200);
+}
+
+/* 6.2 NORMAL-SELECT */
+
+.ui-small-label-select {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.ui-small-label-select__label {
+  position: absolute;
+  left: 17px;
+  top: -8px;
+  color: var(--ui-neutral-400);
+  background: var(--ui-white);
+  padding: 0 3px;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  transition: .2s all;
+  z-index: 1;
+}
+
+.ui-small-label-select:focus-within .ui-small-label-select__label {
+  color: var(--ui-primary-200);
+}
+
+.ui-small-label-select__select {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 40px 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.ui-small-label-select__select:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-small-label-select__icon {
+  position: absolute;
+  inset: 1px;
+  left: auto;
+  background: var(--ui-white);
+  padding: 11px 17px 11px 0;
+  border-radius: 5px;
+  color: inherit;
+  pointer-events: none;
+  transition: .2s all;
+}
+
+.ui-small-label-select:focus-within .ui-small-label-select__icon {
+  color: var(--ui-primary-200);
+}
+
+
+/*  */
+
+.ui-simple-select,
+.ui-small-label-select,
+.ui-simple-input,
+.ui-normal-label-input,
+.ui-small-label-input {
+  min-width: 250px;
 }
