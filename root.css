@@ -314,6 +314,12 @@ body {
 /* 5.1 SIMPLE-INPUT */
 
 .ui-simple-input {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.ui-simple-input__input {
+  width: 100%;
   border-radius: 5px;
   border: solid 1px var(--ui-neutral-300);
   background-color: var(--ui-white);
@@ -330,7 +336,7 @@ body {
   transition: .2s all;
 }
 
-.ui-simple-input:focus {
+.ui-simple-input__input:focus {
   border-color: var(--ui-primary-200);
 }
 
@@ -343,7 +349,8 @@ body {
 /* 5.2 SMALL-LABEL-INPUT */
 
 .ui-small-label-input {
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 0;
 }
@@ -400,7 +407,7 @@ body {
 
 .ui-normal-label-input {
   display: inline-flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .ui-normal-label-input__input {
@@ -432,6 +439,7 @@ body {
 }
 
 .ui-normal-label-input__label {
+  width: 100%;
   color: var(--ui-neutral-400);
   font-size: 13px;
   font-weight: 500;
@@ -570,5 +578,5 @@ body {
 .ui-simple-input,
 .ui-normal-label-input,
 .ui-small-label-input {
-  min-width: 250px;
+  width: 300px;
 }
