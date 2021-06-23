@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../normalization.css">
+  <link rel="stylesheet" href="../../root.css">
+  <link rel="stylesheet" href="./app.css">
+
+  <style>
+    .webappui-component-wrapper {
+      margin: 100px auto;
+    }
+  </style>
+  <title>Component 05</title>
+</head>
+
+<body>
+
+  <div>
+    <!-- <h2 class="ui-h2">Action Toast</h2>
+    <button data-open-action-toast="1" class="ui-btn ui-btn--primary-outline">Click To Open</button>
+    <script>
+      document.querySelector('[data-open-action-toast="1"]').onclick = async (e) => {
+        uiOpenActionToast({ text: 'Configuration saved successfully!', confirmText: 'Get It', cancelText: '' })
+      }
+    </script> -->
+
+    <div class="webappui-component-wrapper">
+      <div class="ui-action-toast ui-action-toast--bottom-left" onanimationend="uiRemoveActionToast(event)">
+        <div class="ui-action-toast__content-flex">
+          <span class="ui-action-toast__headline">Update available!</span>
+          <p class="ui-action-toast__text">A new version is available for download</p>
+        </div>
+        <div class="ui-action-toast__actions-flex">
+          <button class="ui-action-toast__confirm-btn">Get it!</button>
+          <button onclick="uiCloseActionToast(event)" class="ui-action-toast__cancel-btn">Not now</button>
+        </div>
+      </div>
+
+      <script>
+        function uiCloseActionToast(e) {
+          var UiActionToast
+          if (e.classList && e.classList.contains('ui-action-toast')) {
+            UiActionToast = e
+          } else {
+            UiActionToast = e.target.closest('.ui-action-toast')
+          }
+
+          UiActionToast.classList.add('ui-action-toast--close')
+        }
+
+        function uiRemoveActionToast(e) {
+          var UiActionToast = e.target
+
+          if (UiActionToast.classList.contains('ui-action-toast--close')) {
+            UiActionToast.parentNode.remove()
+          }
+        }
+      </script>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

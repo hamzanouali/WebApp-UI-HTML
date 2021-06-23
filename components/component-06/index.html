@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../normalization.css">
+  <link rel="stylesheet" href="../../root.css">
+  <link rel="stylesheet" href="./app.css">
+
+  <style>
+    .webappui-component-wrapper {
+      margin: 100px auto;
+    }
+  </style>
+  <title>Component 05</title>
+</head>
+
+<body>
+
+  <div>
+    <h2 class="ui-h2">Undo Toast</h2>
+    <button data-open-undo-toast="1" class="ui-btn ui-btn--primary-outline">Click To Open</button>
+    <script>
+      document.querySelector('[data-open-undo-toast="1"]').onclick = async (e) => {
+        var value = await uiOpenUndoToast({ text: 'Configuration saved successfully!', buttonText: 'Undo' })
+        if (value) {
+          uiOpenUndoToast({ text: 'Configuration reverted successfully!', buttonText: 'OK' })
+        }
+      }
+    </script>
+
+    <div class="webappui-component-wrapper">
+      <script>
+        function uiCloseUndoToast(e) {
+          var UiUndoToast
+          if (e.classList && e.classList.contains('ui-undo-toast')) {
+            UiUndoToast = e
+          } else {
+            UiUndoToast = e.target.closest('.ui-undo-toast')
+          }
+
+          UiUndoToast.classList.add('ui-undo-toast--close')
+        }
+
+        function uiRemoveUndoToast(e) {
+          var UiUndoToast = e.target
+
+          if (UiUndoToast.classList.contains('ui-undo-toast--close')) {
+            UiUndoToast.parentNode.remove()
+          }
+        }
+
+        function uiOpenUndoToast(options) {
+          var html = `
+            <div class="ui-undo-toast ui-undo-toast--` + options.position + `" onanimationend="uiRemoveUndoToast(event)">
+              <span class="ui-undo-toast__text">`+ options.text + `</span>
+              <button class="ui-undo-toast__btn">`+ options.buttonText + `</button>
+            </div>
+          `
+          var div = document.createElement('div')
+          div.classList.add('ui-undo-toast-container')
+          div.innerHTML = html
+
+          document.body.appendChild(div)
+
+          if (options.autoCloseAfter && typeof options.autoCloseAfter === "number" && options.autoCloseAfter > 0) {
+            setTimeout(function () {
+              uiCloseUndoToast(div.firstElementChild)
+            }, options.autoCloseAfter);
+          }
+
+          return new Promise((resolve, reject) => {
+            div.querySelector('.ui-undo-toast__btn').onclick = (event) => {
+              uiCloseUndoToast(event);
+              resolve({ action: true })
+            }
+          })
+        }
+      </script>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
