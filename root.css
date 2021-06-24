@@ -397,6 +397,7 @@ body {
   line-height: 1.6;
   letter-spacing: normal;
   transition: .2s all;
+  z-index: 1;
 }
 
 .ui-small-label-input:focus-within .ui-small-label-input__label {
@@ -452,6 +453,39 @@ body {
 }
 
 .ui-normal-label-input:focus-within .ui-normal-label-input__label {
+  color: var(--ui-primary-200);
+}
+
+/* 5.4 INPUT-GROUP FOR ICONS */
+
+.ui-input-icon-group {
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 0;
+  --ui-normal-label-input__icon--width: 47px;
+}
+
+.ui-input-icon-group input {
+  padding-left: var(--ui-normal-label-input__icon--width);
+}
+
+.ui-input-icon-group__icon {
+  position: absolute;
+  inset: 1px;
+  right: auto;
+  color: var(--ui-neutral-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-normal-label-input__icon--width);
+  height: 100%;
+  transition: .2s all;
+}
+
+.ui-simple-input:focus-within .ui-input-icon-group__icon,
+.ui-small-label-input:focus-within .ui-input-icon-group__icon,
+.ui-normal-label-input:focus-within .ui-input-icon-group__icon {
   color: var(--ui-primary-200);
 }
 
