@@ -1,0 +1,22 @@
+{
+  "name": "webappui-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzanouali/WebApp-UI-HTML.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamzanouali/WebApp-UI-HTML/issues"
+  },
+  "homepage": "https://github.com/hamzanouali/WebApp-UI-HTML#readme",
+  "dependencies": {
+    "intl-tel-input": "^17.0.13"
+  }
+}

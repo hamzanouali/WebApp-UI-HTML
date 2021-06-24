@@ -397,7 +397,7 @@ body {
   line-height: 1.6;
   letter-spacing: normal;
   transition: .2s all;
-  z-index: 1;
+  z-index: 2;
 }
 
 .ui-small-label-input:focus-within .ui-small-label-input__label {
@@ -456,7 +456,58 @@ body {
   color: var(--ui-primary-200);
 }
 
-/* 5.4 INPUT-GROUP FOR ICONS */
+/* 5.4 TELEPHONE-INPUT */
+
+.ui-simple-tel-input {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.ui-simple-tel-input__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px 11px 60px !important;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-simple-tel-input__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-simple-tel-input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-simple-tel-input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-simple-tel-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+.ui-simple-tel-input .iti {
+  width: 100%;
+}
+
+.ui-simple-tel-input .iti__selected-flag {
+  padding-left: 17px;
+}
+
+.ui-simple-tel-input .iti__arrow {
+  margin-left: 8px;
+}
+
+.ui-simple-tel-input .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background: var(--ui-neutral-100);
+}
+
+/* 5.5 INPUT-GROUP FOR ICONS */
 
 .ui-input-icon-group {
   width: 100%;
@@ -558,7 +609,7 @@ body {
   line-height: 1.6;
   letter-spacing: normal;
   transition: .2s all;
-  z-index: 1;
+  z-index: 2;
 }
 
 .ui-small-label-select:focus-within .ui-small-label-select__label {
@@ -611,6 +662,7 @@ body {
 .ui-small-label-select,
 .ui-simple-input,
 .ui-normal-label-input,
-.ui-small-label-input {
+.ui-small-label-input,
+.ui-simple-tel-input {
   width: 300px;
 }
