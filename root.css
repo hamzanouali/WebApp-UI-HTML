@@ -355,6 +355,10 @@ body {
   z-index: 0;
 }
 
+.ui-small-label-input:focus-within {
+  z-index: 1;
+}
+
 .ui-small-label-input__input {
   width: 100%;
   border-radius: 5px;
@@ -461,6 +465,12 @@ body {
 .ui-simple-tel-input {
   display: inline-flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 0;
+}
+
+.ui-simple-tel-input:focus-within {
+  z-index: 1;
 }
 
 .ui-simple-tel-input__input {
@@ -481,6 +491,7 @@ body {
   transition: .2s all;
 }
 
+.ui-simple-tel-input:focus-within .ui-simple-tel-input__input,
 .ui-simple-tel-input__input:focus {
   border-color: var(--ui-primary-200);
 }
@@ -504,7 +515,54 @@ body {
 }
 
 .ui-simple-tel-input .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background: transparent;
+}
+
+.ui-simple-tel-input .iti__country-list {
+  box-shadow: var(--ui-shadow-300);
+  border: 1px solid var(--ui-neutral-300);
+  border-radius: 5px;
+  margin-top: 8px;
+  transform-origin: top left;
+  animation: uiShowTelInputListDropdown .7s;
+}
+
+@keyframes uiShowTelInputListDropdown {
+  from {
+    transform: scale(.8);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.ui-simple-tel-input .iti__country {
+  padding: 11px 17px;
+  outline: 0;
+  font-size: 13px;
+  color: inherit;
+  font-weight: 500;
+}
+
+.ui-simple-tel-input .iti__country:hover,
+.ui-simple-tel-input .iti__country:focus,
+.ui-simple-tel-input .iti__country.iti__highlight {
   background: var(--ui-neutral-100);
+}
+
+.ui-simple-tel-input .iti__country-name, .iti__flag-box {
+  margin-right: 12px;
+}
+
+.ui-simple-tel-input .iti__divider {
+  margin: 0;
+  padding: 0;
+  border-color: var(--ui-neutral-300);
 }
 
 /* 5.5 INPUT-GROUP FOR ICONS */
@@ -546,6 +604,10 @@ body {
   display: inline-block;
   position: relative;
   z-index: 0;
+}
+
+.ui-simple-select:focus-within {
+  z-index: 1;
 }
 
 .ui-simple-select__select {
@@ -593,6 +655,10 @@ body {
   display: inline-block;
   position: relative;
   z-index: 0;
+}
+
+.ui-small-label-select:focus-within {
+  z-index: 1;
 }
 
 .ui-small-label-select__label {
