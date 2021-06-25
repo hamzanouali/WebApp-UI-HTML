@@ -352,11 +352,6 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   position: relative;
-  z-index: 0;
-}
-
-.ui-small-label-input:focus-within {
-  z-index: 1;
 }
 
 .ui-small-label-input__input {
@@ -401,7 +396,7 @@ body {
   line-height: 1.6;
   letter-spacing: normal;
   transition: .2s all;
-  z-index: 2;
+  z-index: 1;
 }
 
 .ui-small-label-input:focus-within .ui-small-label-input__label {
@@ -466,11 +461,6 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   position: relative;
-  z-index: 0;
-}
-
-.ui-simple-tel-input:focus-within {
-  z-index: 1;
 }
 
 .ui-simple-tel-input__input {
@@ -524,21 +514,15 @@ body {
   border-radius: 5px;
   margin-top: 8px;
   transform-origin: top left;
-  animation: uiShowTelInputListDropdown .7s;
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  transition: .3s all;
 }
 
-@keyframes uiShowTelInputListDropdown {
-  from {
-    transform: scale(.8);
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
+.ui-simple-tel-input .iti__hide {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .ui-simple-tel-input .iti__country {
@@ -571,7 +555,6 @@ body {
   width: 100%;
   display: flex;
   position: relative;
-  z-index: 0;
   --ui-normal-label-input__icon--width: 47px;
 }
 
@@ -603,11 +586,6 @@ body {
 .ui-simple-select {
   display: inline-block;
   position: relative;
-  z-index: 0;
-}
-
-.ui-simple-select:focus-within {
-  z-index: 1;
 }
 
 .ui-simple-select__select {
@@ -654,11 +632,6 @@ body {
 .ui-small-label-select {
   display: inline-block;
   position: relative;
-  z-index: 0;
-}
-
-.ui-small-label-select:focus-within {
-  z-index: 1;
 }
 
 .ui-small-label-select__label {
@@ -675,7 +648,7 @@ body {
   line-height: 1.6;
   letter-spacing: normal;
   transition: .2s all;
-  z-index: 2;
+  z-index: 1;
 }
 
 .ui-small-label-select:focus-within .ui-small-label-select__label {
