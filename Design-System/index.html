@@ -220,6 +220,18 @@
           <h2>Telephone Input</h2>
           <br>
 
+          <div id="unique-id-2" class="ui-simple-tel-input">
+            <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
+          </div>
+          <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
+          <script>
+            var input = document.querySelector('#unique-id-2 input');
+            window.intlTelInput(input, {
+              autoPlaceholder: 'aggressive',
+              utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",
+            });
+          </script>
+          <br><br>
           <div id="unique-id-1" class="ui-simple-tel-input ui-small-label-input">
             <label class="ui-small-label-input__label" for="input-unique-id-1">Phone number</label>
             <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
@@ -229,16 +241,18 @@
             var input = document.querySelector('#unique-id-1 input');
             window.intlTelInput(input, {
               autoPlaceholder: 'aggressive',
+              separateDialCode: true,
               utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",
             });
           </script>
           <br><br>
-          <div id="unique-id-2" class="ui-simple-tel-input">
+          <div id="unique-id-3" class="ui-simple-tel-input ui-normal-label-input">
+            <label class="ui-normal-label-input__label" for="input-unique-id-1">Phone number</label>
             <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
           </div>
           <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
           <script>
-            var input = document.querySelector('#unique-id-2 input');
+            var input = document.querySelector('#unique-id-3 input');
             window.intlTelInput(input, {
               autoPlaceholder: 'aggressive',
               utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",

@@ -463,13 +463,20 @@ body {
   position: relative;
 }
 
+
+.iti--allow-dropdown:not(.iti--separate-dial-code) .ui-simple-tel-input__input {
+  padding-left: 65px !important;
+}
+
 .ui-simple-tel-input__input {
   width: 100%;
   border-radius: 5px;
   border: solid 1px var(--ui-neutral-300);
   background-color: var(--ui-white);
   color: inherit;
-  padding: 11px 17px 11px 60px !important;
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+  padding-right: 17px !important;
   font-size: 13px;
   font-weight: 500;
   font-stretch: normal;
@@ -504,15 +511,17 @@ body {
   margin-left: 8px;
 }
 
+.ui-simple-tel-input .iti--separate-dial-code .iti__selected-flag,
 .ui-simple-tel-input .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
   background: transparent;
+  font-size: 13px;
 }
 
 .ui-simple-tel-input .iti__country-list {
   box-shadow: var(--ui-shadow-300);
   border: 1px solid var(--ui-neutral-300);
   border-radius: 5px;
-  margin-top: 8px;
+  margin-top: 6px;
   transform-origin: top left;
   display: block !important;
   visibility: visible;
