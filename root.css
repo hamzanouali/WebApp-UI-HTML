@@ -340,9 +340,9 @@ body {
   border-color: var(--ui-primary-200);
 }
 
-.ui-simple-input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
-.ui-simple-input:-ms-input-placeholder, /* Internet Explorer 10-11 */
-.ui-simple-input::-ms-input-placeholder { /* Microsoft Edge */
+.ui-simple-input__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-simple-input__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-simple-input__input::-ms-input-placeholder { /* Microsoft Edge */
   color: var(--ui-neutral-400);
 }
 
@@ -464,7 +464,7 @@ body {
 }
 
 
-.iti--allow-dropdown:not(.iti--separate-dial-code) .ui-simple-tel-input__input {
+.ui-simple-tel-input .iti--allow-dropdown:not(.iti--separate-dial-code) .ui-simple-tel-input__input {
   padding-left: 65px !important;
 }
 
@@ -493,9 +493,9 @@ body {
   border-color: var(--ui-primary-200);
 }
 
-.ui-simple-tel-input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
-.ui-simple-tel-input:-ms-input-placeholder, /* Internet Explorer 10-11 */
-.ui-simple-tel-input::-ms-input-placeholder { /* Microsoft Edge */
+.ui-simple-tel-input__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-simple-tel-input__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-simple-tel-input__input::-ms-input-placeholder { /* Microsoft Edge */
   color: var(--ui-neutral-400);
 }
 
@@ -509,12 +509,21 @@ body {
 
 .ui-simple-tel-input .iti__arrow {
   margin-left: 8px;
+  border-top: 4px solid var(--ui-neutral-500);
+  transition: .2s all;
+}
+
+.ui-simple-tel-input .iti__arrow--up {
+  border-bottom: none;
+  transform: rotate(-180deg);
 }
 
 .ui-simple-tel-input .iti--separate-dial-code .iti__selected-flag,
 .ui-simple-tel-input .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
   background: transparent;
   font-size: 13px;
+  font-weight: 500;
+  color: var(--ui-neutral-400);
 }
 
 .ui-simple-tel-input .iti__country-list {
@@ -558,7 +567,127 @@ body {
   border-color: var(--ui-neutral-300);
 }
 
-/* 5.5 INPUT-GROUP FOR ICONS */
+/* 5.5 TELEPHONE-INPUT */
+
+.ui-simple-country-select {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+.ui-simple-country-select .iti--allow-dropdown:not(.iti--separate-dial-code) .ui-simple-country-select__input {
+  padding-left: 47px !important;
+}
+
+.ui-simple-country-select__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+  padding-right: 17px !important;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-simple-country-select:focus-within .ui-simple-country-select__input,
+.ui-simple-country-select__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-simple-country-select__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-simple-country-select__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-simple-country-select__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+.ui-simple-country-select .iti {
+  width: 100%;
+}
+
+.ui-simple-country-select .iti__flag-container {
+  right: 0;
+  width: 100%;
+}
+
+.ui-simple-country-select .iti__selected-flag {
+  padding-left: 17px;
+  outline: none;
+}
+
+.ui-simple-country-select .iti__arrow {
+  display: none;
+}
+
+.ui-simple-country-select .iti--separate-dial-code .iti__selected-flag,
+.ui-simple-country-select .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ui-neutral-400);
+}
+
+.ui-simple-country-select .iti__dial-code {
+  display: none;
+}
+
+.ui-simple-country-select .iti__flag-container {
+  right: 0;
+  width: 100%;
+}
+
+.ui-simple-country-select .iti__country-list {
+  box-shadow: var(--ui-shadow-300);
+  border: 1px solid var(--ui-neutral-300);
+  border-radius: 5px;
+  margin-top: 6px;
+  transform-origin: top left;
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  transition: .3s all;
+}
+
+.ui-simple-country-select .iti__hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ui-simple-country-select .iti__country {
+  padding: 11px 17px;
+  outline: 0;
+  font-size: 13px;
+  color: inherit;
+  font-weight: 500;
+}
+
+.ui-simple-country-select .iti__country:hover,
+.ui-simple-country-select .iti__country:focus,
+.ui-simple-country-select .iti__country.iti__highlight {
+  background: var(--ui-neutral-100);
+}
+
+.ui-simple-country-select .iti__country-name, .iti__flag-box {
+  margin-right: 11px !important;
+}
+
+.ui-simple-country-select .iti__divider {
+  margin: 0;
+  padding: 0;
+  border-color: var(--ui-neutral-300);
+}
+
+/* 5.6 INPUT-GROUP FOR ICONS */
 
 .ui-input-icon-group {
   width: 100%;
@@ -624,11 +753,13 @@ body {
   position: absolute;
   inset: 1px;
   left: auto;
+  color: var(--ui-neutral-400);
   background: var(--ui-white);
   padding: 11px 17px 11px 0;
   border-radius: 5px;
   color: inherit;
   pointer-events: none;
+  line-height: 1.7;
   transition: .2s all;
 }
 
@@ -691,11 +822,13 @@ body {
   position: absolute;
   inset: 1px;
   left: auto;
+  color: var(--ui-neutral-400);
   background: var(--ui-white);
   padding: 11px 17px 11px 0;
   border-radius: 5px;
   color: inherit;
   pointer-events: none;
+  line-height: 1.7;
   transition: .2s all;
 }
 
@@ -711,6 +844,7 @@ body {
 .ui-simple-input,
 .ui-normal-label-input,
 .ui-small-label-input,
-.ui-simple-tel-input {
+.ui-simple-tel-input,
+.ui-simple-country-select {
   width: 300px;
 }

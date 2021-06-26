@@ -259,7 +259,6 @@
             });
           </script>
           <br><br>
-
         </li>
       </ol>
       <h1>
@@ -309,6 +308,45 @@
           </div>
           <br>
           <br>
+        </li>
+      </ol>
+      <h1>
+        Select
+      </h1>
+      <ol>
+        <li>
+          <h2>Simple-Select</h2>
+          <br>
+          <div id="unique-id-4" class="ui-simple-country-select ui-small-label-input">
+            <label class="ui-small-label-input__label" for="input-unique-id-4">Select Country</label>
+            <input class="ui-simple-country-select__input" type="tel" id="input-unique-id-4">
+            <span class="ui-small-label-select__icon">
+              <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
+                <path
+                  d="M15.9,9.3L12,13.2L8.1,9.3c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l5,5c0.2,0.2,0.5,0.2,0.6,0l5-5  c0.4-0.4,0.4-1,0-1.4l0,0C16.9,8.9,16.3,8.9,15.9,9.3z" />
+              </svg>
+            </span>
+          </div>
+          <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
+          <script>
+            var input = document.querySelector('#unique-id-4 input')
+            window.intlTelInput(input, {
+              autoPlaceholder: false,
+              initialCountry: "",
+              utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",
+            })
+            var iti = window.intlTelInputGlobals.getInstance(input)
+            input.value = iti.getSelectedCountryData().name
+            input.addEventListener("focus", function () {
+              input.blur()
+            })
+            input.addEventListener("countrychange", function () {
+              input.value = iti.getSelectedCountryData().name
+              input.blur()
+            })
+          </script>
+          <br><br>
         </li>
       </ol>
       <br>
