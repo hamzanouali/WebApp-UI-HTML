@@ -687,7 +687,70 @@ body {
   border-color: var(--ui-neutral-300);
 }
 
-/* 5.6 INPUT-GROUP FOR ICONS */
+/* 5.6 COPY TO CLIPBOARD INPUT */
+
+/* 5.1 SIMPLE-INPUT */
+
+.ui-copy-input {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.ui-copy-input__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-copy-input__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-copy-input__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-copy-input__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-copy-input__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+.ui-copy-input__copy-btn {
+  position: absolute;
+  inset: 7.4px;
+  left: auto;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ui-neutral-300);
+  color: var(--ui-neutral-400);
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.ui-copy-input:focus-within .ui-copy-input__copy-btn,
+.ui-copy-input__copy-btn:focus,
+.ui-copy-input__copy-btn:hover {
+  color: var(--ui-primary-200__invert);
+  background: var(--ui-primary-200);
+}
+
+/* 5.7 INPUT-GROUP FOR ICONS */
 
 .ui-input-icon-group {
   width: 100%;
@@ -845,6 +908,7 @@ body {
 .ui-normal-label-input,
 .ui-small-label-input,
 .ui-simple-tel-input,
-.ui-simple-country-select {
+.ui-simple-country-select,
+.ui-copy-input {
   width: 300px;
 }
