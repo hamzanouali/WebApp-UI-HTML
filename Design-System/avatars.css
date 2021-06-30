@@ -50,26 +50,31 @@
 .ui-avatar.ui-avatar--offline::before {
   right: 0px;
   bottom: 0px;
+  transform: scale(0.9);
 }
 
 .ui-avatar--very-small.ui-avatar--offline::before {
   right: -3px;
   bottom: -3px;
+  transform: scale(0.7);
 }
 
 .ui-avatar--small.ui-avatar--offline::before {
   right: -2px;
   bottom: -2px;
+  transform: scale(0.8);
 }
 
 .ui-avatar--medium.ui-avatar--offline::before {
   right: 3px;
   bottom: 2px;
+  transform: scale(1);
 }
 
 .ui-avatar--large.ui-avatar--offline::before {
   right: 10px;
   bottom: 4px;
+  transform: scale(1);
 }
 
 .ui-avatar--online {
@@ -89,26 +94,31 @@
 .ui-avatar.ui-avatar--online::before {
   right: 0px;
   bottom: 0px;
+  transform: scale(0.9);
 }
 
 .ui-avatar--very-small.ui-avatar--online::before {
   right: -3px;
   bottom: -3px;
+  transform: scale(0.7);
 }
 
 .ui-avatar--small.ui-avatar--online::before {
   right: -2px;
   bottom: -2px;
+  transform: scale(0.8);
 }
 
 .ui-avatar--medium.ui-avatar--online::before {
   right: 3px;
   bottom: 2px;
+  transform: scale(1);
 }
 
 .ui-avatar--large.ui-avatar--online::before {
   right: 10px;
   bottom: 4px;
+  transform: scale(1);
 }
 
 .ui-avatar--edit {
