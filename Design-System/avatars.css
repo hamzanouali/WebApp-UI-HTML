@@ -1,0 +1,180 @@
+.ui-avatar {
+  /* default width and height */
+  --ui-avatar--width-and-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-avatar--width-and-height);
+  height: var(--ui-avatar--width-and-height);
+}
+
+.ui-avatar--very-small {
+  --ui-avatar--width-and-height: 30px;
+}
+
+.ui-avatar--small {
+  --ui-avatar--width-and-height: 37px;
+}
+
+.ui-avatar--medium {
+  --ui-avatar--width-and-height: 66px;
+}
+
+.ui-avatar--large {
+  --ui-avatar--width-and-height: 99px;
+}
+
+.ui-avatar__img {
+  width: var(--ui-avatar--width-and-height);
+  height: var(--ui-avatar--width-and-height);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10rem;
+  border: solid 2px var(--ui-white);
+}
+
+.ui-avatar--offline {
+  position: relative;
+}
+
+.ui-avatar--offline::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10rem;
+  border: solid 2px var(--ui-white);
+  background-color: var(--ui-danger-200);
+}
+
+.ui-avatar.ui-avatar--offline::before {
+  right: 0px;
+  bottom: 0px;
+}
+
+.ui-avatar--very-small.ui-avatar--offline::before {
+  right: -3px;
+  bottom: -3px;
+}
+
+.ui-avatar--small.ui-avatar--offline::before {
+  right: -2px;
+  bottom: -2px;
+}
+
+.ui-avatar--medium.ui-avatar--offline::before {
+  right: 3px;
+  bottom: 2px;
+}
+
+.ui-avatar--large.ui-avatar--offline::before {
+  right: 10px;
+  bottom: 4px;
+}
+
+.ui-avatar--online {
+  position: relative;
+}
+
+.ui-avatar--online::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10rem;
+  border: solid 2px var(--ui-white);
+  background-color: var(--ui-success-100);
+}
+
+.ui-avatar.ui-avatar--online::before {
+  right: 0px;
+  bottom: 0px;
+}
+
+.ui-avatar--very-small.ui-avatar--online::before {
+  right: -3px;
+  bottom: -3px;
+}
+
+.ui-avatar--small.ui-avatar--online::before {
+  right: -2px;
+  bottom: -2px;
+}
+
+.ui-avatar--medium.ui-avatar--online::before {
+  right: 3px;
+  bottom: 2px;
+}
+
+.ui-avatar--large.ui-avatar--online::before {
+  right: 10px;
+  bottom: 4px;
+}
+
+.ui-avatar--edit {
+  position: relative;
+  cursor: pointer;
+}
+
+.ui-avatar--edit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  transition: .2s all;
+}
+
+.ui-avatar--edit:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.ui-avatar__camera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  transform: scale(0.9);
+  width: 24px;
+  height: 24px;
+  border-radius: 10rem;
+  background-color: var(--ui-neutral-300);
+  cursor: pointer;
+}
+
+.ui-avatar--very-small .ui-avatar__camera {
+  bottom: -8px;
+  right: -9px;
+  transform: scale(0.6);
+}
+
+.ui-avatar--small .ui-avatar__camera {
+  right: -7px;
+  bottom: -7px;
+  transform: scale(0.7);
+}
+
+.ui-avatar--medium .ui-avatar__camera {
+  right: -2px;
+  bottom: -2px;
+  transform: scale(1);
+}
+
+.ui-avatar--large .ui-avatar__camera {
+  right: 6px;
+  bottom: 0;
+  transform: scale(1);
+}
+
+.ui-avatar__file-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
