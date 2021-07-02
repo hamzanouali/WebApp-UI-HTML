@@ -1,36 +1,46 @@
 .ui-avatar {
-  /* default width and height */
-  --ui-avatar--width-and-height: 48px;
+  --ui-avatar__very-small__width-and-height: 30px;
+  --ui-avatar__small__width-and-height: 37px;
+  --ui-avatar__default__width-and-height: 48px;
+  --ui-avatar__medium__width-and-height: 66px;
+  --ui-avatar__large__width-and-height: 99px;
+
+  --ui-avatar-border-width: 2px;
+  --ui-avatar-border-color: var(--ui-white);
+  --ui-avatar-shadow: var(--ui-shadow-300);
+  --ui-avatar-radius: 10rem;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  --ui-avatar--width-and-height: var(--ui-avatar__default__width-and-height);
   width: var(--ui-avatar--width-and-height);
   height: var(--ui-avatar--width-and-height);
+  box-shadow: var(--ui-avatar-shadow);
+  border-radius: var(--ui-avatar-radius);
+  border: solid var(--ui-avatar-border-width) var(--ui-avatar-border-color);
 }
 
 .ui-avatar--very-small {
-  --ui-avatar--width-and-height: 30px;
+  --ui-avatar--width-and-height: var(--ui-avatar__very-small__width-and-height);
 }
 
 .ui-avatar--small {
-  --ui-avatar--width-and-height: 37px;
+  --ui-avatar--width-and-height: var(--ui-avatar__small__width-and-height);
 }
 
 .ui-avatar--medium {
-  --ui-avatar--width-and-height: 66px;
+  --ui-avatar--width-and-height: var(--ui-avatar__medium__width-and-height);
 }
 
 .ui-avatar--large {
-  --ui-avatar--width-and-height: 99px;
+  --ui-avatar--width-and-height: var(--ui-avatar__large__width-and-height);
 }
 
 .ui-avatar__img {
-  width: var(--ui-avatar--width-and-height);
-  height: var(--ui-avatar--width-and-height);
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
   border-radius: 10rem;
-  border: solid 2px var(--ui-white);
 }
 
 .ui-avatar--offline {
@@ -43,7 +53,7 @@
   width: 10px;
   height: 10px;
   border-radius: 10rem;
-  border: solid 2px var(--ui-white);
+  border: solid var(--ui-avatar-border-width) var(--ui-avatar-border-color);
   background-color: var(--ui-danger-200);
 }
 
@@ -87,7 +97,7 @@
   width: 10px;
   height: 10px;
   border-radius: 10rem;
-  border: solid 2px var(--ui-white);
+  border: solid var(--ui-avatar-border-width) var(--ui-avatar-border-color);
   background-color: var(--ui-success-100);
 }
 
@@ -133,7 +143,7 @@
   background: transparent;
   width: 100%;
   height: 100%;
-  border-radius: 10rem;
+  border-radius: var(--ui-avatar-radius);
   transition: .2s all;
 }
 
