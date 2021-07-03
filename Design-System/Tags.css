@@ -1,0 +1,22 @@
+/* 2. TAGS */
+
+.ui-tag {
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  text-align: left;
+  background: var(--ui-secondary-100);
+  color: var(--ui-secondary-100__invert);
+  border: 1px solid var(--ui-secondary-100);
+  border-radius: 10rem;
+  padding: 6px 18px;
+}
+
+.ui-tag--outline {
+  background: transparent;
+  color: var(--ui-secondary-200);
+  border-color: var(--ui-secondary-200);
+}

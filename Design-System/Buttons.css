@@ -1,0 +1,145 @@
+/* 1. BUTTONS ================ */
+
+.ui-btn {
+  padding: 11px 32px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  border: none;
+  cursor: pointer;
+  border: 1px solid;
+  transition: var(--ui-btn-transition);
+}
+
+/* 1.1 PRIMARY */
+
+.ui-btn--primary {
+  color: var(--ui-primary-200__invert);
+  background: var(--ui-primary-200);
+  border-color: var(--ui-primary-200);
+}
+
+.ui-btn--primary:hover,
+.ui-btn--primary:focus {
+  color: var(--ui-primary-300__invert);
+  background: var(--ui-primary-300);
+  border-color: var(--ui-primary-300);
+}
+
+.ui-btn--primary-outline {
+  color: var(--ui-primary-200);
+  background: var(--ui-primary-100);
+  border-color: var(--ui-primary-200);
+}
+
+.ui-btn--primary-outline:hover,
+.ui-btn--primary-outline:focus {
+  color: var(--ui-primary-300__invert);
+  background: var(--ui-primary-300);
+  border-color: var(--ui-primary-300);
+}
+
+/* 1.2 DANGER */
+
+.ui-btn--danger {
+  color: var(--ui-danger-200__invert);
+  background: var(--ui-danger-200);
+  border-color: var(--ui-danger-200);
+}
+
+.ui-btn--danger:hover,
+.ui-btn--danger:focus {
+  color: var(--ui-danger-300__invert);
+  background: var(--ui-danger-300);
+  border-color: var(--ui-danger-300);
+}
+
+.ui-btn--danger-outline {
+  color: var(--ui-danger-200);
+  background: var(--ui-danger-100);
+  border-color: var(--ui-danger-200);
+}
+
+.ui-btn--danger-outline:hover,
+.ui-btn--danger-outline:focus {
+  color: var(--ui-danger-300__invert);
+  background: var(--ui-danger-300);
+  border-color: var(--ui-danger-300);
+}
+
+/* 1.2 WARNING */
+
+.ui-btn--warning {
+  color: var(--ui-warning-200__invert);
+  background: var(--ui-warning-200);
+  border-color: var(--ui-warning-200);
+}
+
+.ui-btn--warning:hover,
+.ui-btn--warning:focus {
+  color: var(--ui-warning-300__invert);
+  background: var(--ui-warning-300);
+  border-color: var(--ui-warning-300);
+}
+
+.ui-btn--warning-outline {
+  color: var(--ui-warning-200);
+  background: var(--ui-warning-100);
+  border-color: var(--ui-warning-200);
+}
+
+.ui-btn--warning-outline:hover,
+.ui-btn--warning-outline:focus {
+  color: var(--ui-danger-300__invert);
+  background: var(--ui-danger-300);
+  border-color: var(--ui-warning-300);
+}
+
+/* 1.3 SUCCESS */
+
+.ui-btn--success {
+  color: var(--ui-success-100__invert);
+  background: var(--ui-success-100);
+  border-color: var(--ui-success-200);
+}
+
+.ui-btn--success:hover,
+.ui-btn--success:focus {
+  color: var(--ui-success-200__invert);
+  background: var(--ui-success-200);
+  border-color: var(--ui-success-200);
+}
+
+.ui-btn--success-outline {
+  color: var(--ui-success-200);
+  background: var(--ui-success-100);
+  border-color: var(--ui-success-200);
+}
+
+.ui-btn--success-outline:hover,
+.ui-btn--success-outline:focus {
+  color: var(--ui-success-300__invert);
+  background: var(--ui-success-300);
+  border-color: var(--ui-success-300);
+}
+
+/* 1.3 BTN ICON  */
+
+.ui-btn--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ui-btn--icon .ui-btn__icon:last-child {
+  margin-left: 8px;
+}
+
+.ui-btn--icon .ui-btn__icon:first-child {
+  margin-right: 8px;
+}

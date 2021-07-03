@@ -1,0 +1,46 @@
+.ui-checkmark {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid;
+  border-radius: 10rem;
+}
+
+.ui-checkmark svg {
+  position: absolute;
+  width: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-54%, -50%);
+}
+
+.ui-checkmark--medium {
+  width: 22px;
+  height: 22px;
+}
+
+.ui-checkmark--medium svg {
+  width: 13.9px;
+}
+
+.ui-checkmark--large {
+  width: 25px;
+  height: 25px;
+}
+
+.ui-checkmark--large svg {
+  width: 15.8px;
+}
+
+.ui-checkmark--filled {
+  background: var(--ui-primary-200);
+  color: var(--ui-primary-200__invert);
+  border-color: var(--ui-primary-200);
+}
+
+.ui-checkmark--empty {
+  background: transparent;
+  color: var(--ui-neutral-400);
+  border-color: var(--ui-neutral-400);
+}

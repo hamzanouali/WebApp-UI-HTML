@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="../node_modules/tippy.js/animations/perspective.css">
   <link rel="stylesheet" href="../node_modules/tippy.js/dist/tippy.css">
 
+  <!-- Tagify -->
+  <script src="https://unpkg.com/@yaireo/tagify"></script>
+  <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+  <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+
   <style>
     @media(max-width: 992px) {
       ol {
@@ -233,9 +238,17 @@
           <br>
         </li>
         <li>
+          <h2>Tags Input</h2>
+          <br>
+          <div class="ui-normal-label-input ui-tags-input">
+            <label class="ui-normal-label-input__label" for="input-unique-id-1">Tags</label>
+            <input class="ui-normal-label-input__input" type="text" placeholder="e.g: games, movies, etc" id="input-unique-id-1">
+          </div>
+          <br><br>
+        </li>
+        <li>
           <h2>Telephone Input</h2>
           <br>
-
           <div id="unique-id-2" class="ui-simple-tel-input">
             <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
           </div>
@@ -338,8 +351,8 @@
         <li>
           <h2>No Label</h2>
           <br>
-          <div id="unique-id-4" class="ui-simple-country-select">
-            <input class="ui-simple-country-select__input" type="tel" id="input-unique-id-4">
+          <div class="ui-country-select">
+            <input class="ui-country-select__input" type="tel">
             <span class="ui-small-label-select__icon">
               <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
@@ -348,34 +361,14 @@
               </svg>
             </span>
           </div>
-          <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
-          <script>
-            var input = document.querySelector('#unique-id-4 input')
-            window.intlTelInput(input, {
-              preferredCountries: [],
-              autoPlaceholder: false,
-              initialCountry: "dz",
-              utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",
-            })
-            var iti = window.intlTelInputGlobals.getInstance(input)
-            input.value = iti.getSelectedCountryData().name
-            input.addEventListener("focus", function () {
-              input.blur()
-            })
-            input.addEventListener("countrychange", function () {
-              input.value = iti.getSelectedCountryData().name
-              input.blur()
-            })
-            window.__iti = iti
-          </script>
           <br><br>
         </li>
         <li>
           <h2>Small Label</h2>
           <br>
-          <div id="unique-id-5" class="ui-simple-country-select ui-small-label-input">
+          <div class="ui-country-select ui-small-label-input">
             <label class="ui-small-label-input__label" for="input-unique-id-5">Select Country</label>
-            <input class="ui-simple-country-select__input" type="tel" id="input-unique-id-4">
+            <input class="ui-country-select__input" type="tel">
             <span class="ui-small-label-select__icon">
               <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
@@ -384,26 +377,6 @@
               </svg>
             </span>
           </div>
-          <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
-          <script>
-            var input = document.querySelector('#unique-id-5 input')
-            window.intlTelInput(input, {
-              preferredCountries: [],
-              autoPlaceholder: false,
-              initialCountry: "dz",
-              utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",
-            })
-            var iti = window.intlTelInputGlobals.getInstance(input)
-            input.value = iti.getSelectedCountryData().name
-            input.addEventListener("focus", function () {
-              input.blur()
-            })
-            input.addEventListener("countrychange", function () {
-              input.value = iti.getSelectedCountryData().name
-              input.blur()
-            })
-            window.__iti = iti
-          </script>
           <br><br>
         </li>
       </ol>
@@ -722,6 +695,102 @@
           <br><br>
         </li>
       </ol>
+      <br>
+      <div>
+        <h2>Typography</h2>
+        <br>
+        <h1 class="ui-h1">Example Heading 01</h1>
+        <br>
+        <h2 class="ui-h2">Example Heading 02</h2>
+        <br>
+        <h3 class="ui-h3">Example Heading 03 - 04 - 05 - 06</h3>
+        <br>
+        <p class="ui-paragraph" style="max-width: 400px">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore
+          magna aliquyam erat, sed diam voluptua.
+        </p>
+        <br>
+      </div>
+      <br>
+      <h1>
+        Checkmark
+      </h1>
+      <br>
+      <ol>
+        <li>
+          <h2>Filled</h2>
+          <br>
+          <ol>
+            <li>
+              <h2>Default</h2>
+              <br>
+              <span class="ui-checkmark ui-checkmark--filled">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+            </li>
+            <br>
+            <li>
+              <h2>Medium</h2>
+              <br>
+              <span class="ui-checkmark ui-checkmark--medium ui-checkmark--filled">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+            </li>
+            <br>
+            <li>
+              <h2>Large</h2>
+              <br>
+              <span class="ui-checkmark ui-checkmark--large ui-checkmark--filled">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+            </li>
+            <br>
+          </ol>
+        </li>
+        <li>
+          <h2>Empty</h2>
+          <br>
+          <ol>
+            <li>
+              <h2>Default</h2>
+              <br>
+              <span class="ui-checkmark ui-checkmark--empty">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+            </li>
+            <br>
+            <li>
+              <h2>Medium</h2>
+              <br>
+              <span class="ui-checkmark ui-checkmark--medium ui-checkmark--empty">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+            </li>
+            <br>
+            <li>
+              <h2>Large</h2>
+              <br>
+              <span class="ui-checkmark ui-checkmark--large ui-checkmark--empty">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+              </span>
+            </li>
+            <br>
+          </ol>
+        </li>
+      </ol>
     </li>
   </ol>
   <br>
@@ -775,6 +844,38 @@
         console.error('Async: Could not copy text: ', err);
       });
     }
+  </script>
+  <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
+  <script>
+    document.querySelectorAll('.ui-country-select input').forEach(function (countrySelectInput) {
+      window.intlTelInput(countrySelectInput, {
+        preferredCountries: [],
+        autoPlaceholder: false,
+        initialCountry: "dz",
+        utilsScript: "../node_modules/intl-tel-input/build/js/utils.js",
+      })
+      var iti = window.intlTelInputGlobals.getInstance(countrySelectInput)
+      countrySelectInput.value = iti.getSelectedCountryData().name
+      countrySelectInput.addEventListener("focus", function () {
+        countrySelectInput.blur()
+      })
+      countrySelectInput.addEventListener("countrychange", function () {
+        countrySelectInput.value = iti.getSelectedCountryData().name
+        countrySelectInput.blur()
+      })
+      countrySelectInput.addEventListener('open:countrydropdown', function (e) {
+        document.querySelector('.iti__country-list').classList.add('ui-country-select__country-list')
+      })
+    })
+
+  </script>
+
+  <script>
+    // The DOM element you wish to replace with Tagify
+    var tagsInput = document.querySelector('.ui-tags-input input');
+
+    // initialize Tagify on the above input node reference
+    new Tagify(tagsInput)
   </script>
 </body>
 

@@ -1,8 +1,8 @@
 .ui-select-03 {
-  background: var(--ui-component-background);
-  padding: var(--ui-component-padding);
-  border-radius: var(--ui-component-radius);
-  box-shadow: var(--ui-component-shadow);
+  background: var(--ui-component-card-background);
+  padding: var(--ui-component-card-padding);
+  border-radius: var(--ui-component-card-radius);
+  box-shadow: var(--ui-component-card-shadow);
   color: var(--ui-neutral-600);
 }
 
