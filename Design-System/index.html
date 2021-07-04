@@ -260,6 +260,7 @@
               <div class="ui-form-input--tagging-users ui-tags-input">
                 <input class="ui-small-label-input__input" type="text" value='abatisse2@nih.gov, Justinian Hattersley'>
               </div>
+              <br><br>
             </li>
           </ol>
         </li>
@@ -1094,7 +1095,7 @@
                 class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ""}"
                 ${this.getAttributes(tagData)}>
             <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
-            <div>
+            <div class="ui-avatar-info">
                 <div class="ui-avatar ui-avatar--very-small">
                   <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
                 </div>
@@ -1110,13 +1111,16 @@
             class='tagify__dropdown__item ${tagData.class ? tagData.class : ""}'
             tabindex="0"
             role="option">
-            ${ tagData.avatar ? `
-            <div class='tagify__dropdown__item__avatar-wrap'>
-                <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
-            </div>` : ''
-        }
-            <strong>${tagData.name}</strong>
-            <span>${tagData.email}</span>
+            <div class="ui-avatar-info">
+              ${tagData.avatar ? `
+              <div class="ui-avatar ui-avatar--very-small">
+                <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
+              </div>
+              ` : ''}
+              <div class="ui-avatar-info__text-container">
+                <span class="ui-avatar-info__primary-text">${tagData.name}</span>
+              </div>
+            </div>
         </div>
         `
     }
@@ -1141,6 +1145,7 @@
 
     usersTagify.on('dropdown:show dropdown:updated', onDropdownShow)
     usersTagify.on('dropdown:select', onSelectSuggestion)
+    usersTagify.on('focus', preventBrowserExtensions)
     usersTagify.on('keydown', preventBrowserExtensions)
 
     var addAllSuggestionsElm;
@@ -1174,13 +1179,16 @@
       )
     }
 
-    function preventBrowserExtensions() {
+    function preventBrowserExtensions(e) {
       var inputContainer = inputElm.parentNode;
       /* delete any element that doesn't belong to Tagify */
       /* some browser extensions inject elements which breaks the input functionality */
       inputContainer.querySelectorAll('.tagify > *:not(.tagify__input):not(.tagify__tag)').forEach(function (element) {
         element.remove();
       })
+
+      /* add classname to the dropdown */
+      console.log(document.querySelector('.tagify__dropdown').outerHTML)
     }
   </script>
 </body>

@@ -234,7 +234,7 @@
   line-height: 1.54;
   letter-spacing: normal;
   color: var(--ui-neutral-400);
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .ui-avatar--small ~ .ui-avatar-info__text-container .ui-avatar-info__secondary-text,

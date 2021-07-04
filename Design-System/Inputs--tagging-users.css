@@ -1,80 +1,35 @@
-.ui-form-input--tagging-users .tagify {
-  width: 100%;
-  max-width: 700px;
-  background: rgba(255, 255, 255, 0.8);
+.tagify__dropdown__item.addAll {
+  padding: 11px 17px;
 }
 
-/* Suggestions items */
-.ui-form-input--tagging-users .tagify__dropdown.users-list {
-  font-size: 14px;
+.tagify__dropdown__item:first-child .ui-avatar-info__text-container {
+  margin-left: 5px;
 }
 
-.ui-form-input--tagging-users .tagify__dropdown.users-list .tagify__dropdown__item {
-  padding: 0.5em 0.7em;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 1em;
-  grid-template-areas: "avatar name" "avatar email";
+.tagify__dropdown__item {
+  padding: 5.5px 17px;
+  border-radius: 0;
 }
 
-.ui-form-input--tagging-users .tagify__dropdown.users-list .tagify__dropdown__item:hover .tagify__dropdown__item__avatar-wrap {
-  transform: scale(1.2);
+.tagify__dropdown__item--active {
+  background: var(--ui-neutral-100);
 }
 
-.ui-form-input--tagging-users .tagify__dropdown.users-list .tagify__dropdown__item__avatar-wrap {
-  grid-area: avatar;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #EEE;
-  transition: 0.1s ease-out;
+.tagify__dropdown {
+  box-shadow: var(--ui-shadow-300);
+  border-radius: 5px;
+  border: none !important;
 }
 
-.ui-form-input--tagging-users .tagify__dropdown.users-list img {
-  width: 100%;
-  vertical-align: top;
+.tagify__dropdown[placement=top] {
+  transform: translateY(calc(-100% - 8px));
 }
 
-.ui-form-input--tagging-users .tagify__dropdown.users-list strong {
-  grid-area: name;
-  width: 100%;
-  align-self: center;
-  font-weight: 500;
+.tagify__dropdown[placement=bottom] {
+  transform: translateY(8px);
 }
 
-.ui-form-input--tagging-users .tagify__dropdown.users-list span {
-  grid-area: email;
-  width: 100%;
-  font-size: 0.9em;
-  opacity: 0.6;
-}
-
-.ui-form-input--tagging-users .tagify__dropdown.users-list .addAll {
-  border-bottom: 1px solid #DDD;
-  gap: 0;
-}
-
-/* Tags items */
-.ui-form-input--tagging-users .tagify__tag {
-  white-space: nowrap;
-}
-
-.ui-form-input--tagging-users .tagify__tag:hover .tagify__tag__avatar-wrap {
-  transform: scale(1.6) translateX(-10%);
-}
-
-.ui-form-input--tagging-users .tagify__tag .tagify__tag__avatar-wrap {
-  width: 16px;
-  height: 16px;
-  white-space: normal;
-  background: silver;
-  border-radius: 50%;
-  margin-right: 5px;
-  transition: 0.12s ease-out;
-}
-
-.ui-form-input--tagging-users .tagify__tag img {
-  width: 100%;
-  vertical-align: top;
+.tagify__dropdown__wrapper {
+  border: none;
+  padding: 0;
 }
