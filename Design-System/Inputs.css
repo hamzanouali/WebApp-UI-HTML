@@ -687,50 +687,76 @@
 
 /* TAGS INPUT */
 
-.tagify {
+.ui-tags-input__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-tags-input__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-tags-input .tagify {
   align-items: center !important;
   padding: 11px 17px 3px 17px !important;
 }
 
-.tagify__tag {
+.ui-tags-input .tagify__tag {
   margin: 0 11px 11px 0 !important;
   background: var(--ui-neutral-200) !important;
   color: var(--ui-neutral-400) !important;
   border-radius: 10rem;
 }
 
-.tagify__tag__removeBtn {
+.ui-tags-input .tagify__tag:last-of-type {
+  margin-right: 0 !important;
+}
+
+.ui-tags-input .tagify__tag__removeBtn {
   padding-right: 10px !important;
   margin: 0 !important;
 }
 
-.tagify__tag > div {
+.ui-tags-input .tagify__tag > div {
   padding: 6px 6px 6px 10px !important;
 }
 
-.tagify__tag > div::before {
+.ui-tags-input .tagify__tag > div::before {
   display: none !important;
 }
 
-.tagify__tag__removeBtn::before,
-.tagify__tag__removeBtn::after,
-.tagify__tag-text {
+.ui-tags-input .tagify__tag__removeBtn::before,
+.ui-tags-input .tagify__tag__removeBtn::after,
+.ui-tags-input .tagify__tag-text {
   color: var(--ui-neutral-400) !important;
 }
 
-.tagify__tag__removeBtn {
+.ui-tags-input .tagify__tag__removeBtn {
   padding-right: 10px !important;
   background: none !important;
   position: relative;
 }
 
-.tagify__tag__removeBtn:hover,
-.tagify__tag__removeBtn:focus {
+.ui-tags-input .tagify__tag__removeBtn:hover,
+.ui-tags-input .tagify__tag__removeBtn:focus {
   background: none !important;
 }
 
-.tagify__tag__removeBtn::before,
-.tagify__tag__removeBtn::after {
+.ui-tags-input .tagify__tag__removeBtn::before,
+.ui-tags-input .tagify__tag__removeBtn::after {
   content: '' !important;
   position: absolute;
   left: 6px !important;
@@ -739,15 +765,15 @@
   background: currentColor;
 }
 
-.tagify__tag__removeBtn::before {
+.ui-tags-input .tagify__tag__removeBtn::before {
   transform: rotate(45deg);
 }
 
-.tagify__tag__removeBtn::after {
+.ui-tags-input .tagify__tag__removeBtn::after {
   transform: rotate(-45deg);
 }
 
-.tagify__input {
+.ui-tags-input .tagify__input {
   margin: 0 0 8px 0!important;
   padding: 0px !important;
   font-size: 13px !important;
@@ -757,7 +783,12 @@
   line-height: 1.54 !important;
 }
 
-.tagify__input:empty::before {
+.ui-tags-input .tagify__tag:last-of-type ~ .tagify__input {
+  padding: 0 10px !important;
+}
+
+.ui-tags-input .tagify__input::before,
+.ui-tags-input .tagify__input:empty::before {
   height: auto !important;
   line-height: 1.54 !important;
   color: var(--ui-neutral-500) !important;
