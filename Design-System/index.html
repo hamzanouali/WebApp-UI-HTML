@@ -713,6 +713,160 @@
         </li>
       </ol>
       <br>
+      <h1>
+        Avatar Info
+      </h1>
+      <br>
+      <ol>
+        <li>
+          <h2>Avatar With A Primary Text</h2>
+          <br>
+          <ol>
+            <li>
+              <h2>Very Small Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--very-small">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Small Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--small">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Default Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Medium Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--medium">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Large Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--large">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h2>Avatar With Primary And Secondary Text</h2>
+          <br>
+          <ol>
+            <li>
+              <h2>Very Small Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--very-small">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                  <span class="ui-avatar-info__secondary-text">oliver.flemming@gmail.com</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Small Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--small">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                  <span class="ui-avatar-info__secondary-text">oliver.flemming@gmail.com</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Default Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                  <span class="ui-avatar-info__secondary-text">oliver.flemming@gmail.com</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Medium Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--medium">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                  <span class="ui-avatar-info__secondary-text">oliver.flemming@gmail.com</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+            <li>
+              <h2>Large Avatar</h2>
+              <br>
+              <div class="ui-avatar-info">
+                <div class="ui-avatar ui-avatar--large">
+                  <img src="../images/avatar-1.jpg" class="ui-avatar__img">
+                </div>
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">Oliver Flemming</span>
+                  <span class="ui-avatar-info__secondary-text">oliver.flemming@gmail.com</span>
+                </div>
+              </div>
+              <br><br>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <br>
       <div>
         <h2>Typography</h2>
         <br>
@@ -941,8 +1095,8 @@
                 ${this.getAttributes(tagData)}>
             <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
             <div>
-                <div class='tagify__tag__avatar-wrap'>
-                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                <div class="ui-avatar ui-avatar--very-small">
+                  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
                 </div>
                 <span class='tagify__tag-text'>${tagData.name}</span>
             </div>
