@@ -159,8 +159,8 @@
         <li>
           <h2>Simple-Input</h2>
           <br>
-          <div class="ui-simple-input">
-            <input class="ui-simple-input__input" type="text" placeholder="Placeholder">
+          <div class="ui-form-item">
+            <input class="ui-form-item__input" type="text" placeholder="Placeholder">
           </div>
           <br>
           <br>
@@ -168,9 +168,9 @@
         <li>
           <h2>Small-Label-Input</h2>
           <br>
-          <div class="ui-small-label-input">
-            <label class="ui-small-label-input__label" for="input-unique-id-1">First name</label>
-            <input class="ui-small-label-input__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+          <div class="ui-form-item ui-form-item--small-label">
+            <label class="ui-form-item__label" for="input-unique-id-1">First name</label>
+            <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
           </div>
           <br>
           <br>
@@ -178,9 +178,9 @@
         <li>
           <h2>Normal-label-Input</h2>
           <br>
-          <div class="ui-normal-label-input">
-            <label class="ui-normal-label-input__label" for="input-unique-id-1">First name</label>
-            <input class="ui-normal-label-input__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+          <div class="ui-form-item">
+            <label class="ui-form-item__label" for="input-unique-id-1">First name</label>
+            <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
           </div>
           <br>
           <br>
@@ -198,10 +198,10 @@
         <li>
           <h2>Input with icon</h2>
           <br>
-          <div class="ui-normal-label-input">
-            <div class="ui-input-icon-group">
-              <input class="ui-normal-label-input__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
-              <span class="ui-input-icon-group__icon">
+          <div class="ui-form-item">
+            <div class="ui-form-item__input-icon-group">
+              <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+              <span class="ui-form-item__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 24 24"
                   fill="currentColor">
                   <path
@@ -211,11 +211,11 @@
             </div>
           </div>
           <br><br>
-          <div class="ui-normal-label-input">
-            <label class="ui-normal-label-input__label" for="input-unique-id-1">First name</label>
-            <div class="ui-input-icon-group">
-              <input class="ui-normal-label-input__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
-              <span class="ui-input-icon-group__icon">
+          <div class="ui-form-item">
+            <label class="ui-form-item__label" for="input-unique-id-1">First name</label>
+            <div class="ui-form-item__input-icon-group">
+              <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+              <span class="ui-form-item__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 24 24"
                   fill="currentColor">
                   <path
@@ -225,11 +225,11 @@
             </div>
           </div>
           <br><br><br>
-          <div class="ui-small-label-input">
-            <label class="ui-small-label-input__label" for="input-unique-id-1">First name</label>
-            <div class="ui-input-icon-group">
-              <input class="ui-small-label-input__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
-              <span class="ui-input-icon-group__icon">
+          <div class="ui-form-item ui-form-item--small-label">
+            <label class="ui-form-item__label" for="input-unique-id-1">First name</label>
+            <div class="ui-form-item__input-icon-group">
+              <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+              <span class="ui-form-item__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 24 24"
                   fill="currentColor">
                   <path
@@ -248,9 +248,9 @@
             <li>
               <h2>Simple Tags Input</h2>
               <br>
-              <div class="ui-tags-input ui-small-label-input">
-                <label class="ui-small-label-input__label" for="input-unique-id-1">Tags</label>
-                <input class="ui-tags-input__input" type="text" placeholder="Write some tags" id="input-unique-id-1">
+              <div class="ui-form-item ui-form-item--tags ui-form-item--small-label">
+                <label class="ui-form-item__label" for="input-unique-id-1">Tags</label>
+                <input class="ui-form-item__input" type="text" placeholder="Write some tags" id="input-unique-id-1">
               </div>
               <br><br>
             </li>
@@ -261,8 +261,8 @@
                 <li>
                   <h2>Search by name</h2>
                   <br>
-                  <div id="tagify-search-by-name" class="ui-form-input--tagging-users ui-form-input ui-tags-input">
-                    <input class="ui-small-label-input__input" type="text" placeholder="write some names"
+                  <div id="tagify-search-by-name" class="ui-form-item ui-form-item--people-tags">
+                    <input class="ui-form-item__input" type="text" placeholder="write some names"
                       value='Justinian Hattersley'>
                   </div>
                   <br><br>
@@ -270,9 +270,8 @@
                 <li>
                   <h2>Search by name and email</h2>
                   <br>
-                  <div id="tagify-search-by-name-and-email"
-                    class="ui-form-input--tagging-users ui-form-input ui-tags-input">
-                    <input class="ui-small-label-input__input" type="text" placeholder="write some names"
+                  <div id="tagify-search-by-name-and-email" class="ui-form-item ui-form-item--tags ui-form-item--people-tags">
+                    <input class="ui-form-item__input" type="text" placeholder="write some names"
                       value='abatisse2@nih.gov, Justinian Hattersley'>
                   </div>
                   <br><br>
@@ -1070,7 +1069,7 @@
 
   <script>
     // The DOM element you wish to replace with Tagify
-    var tagsInput = document.querySelector('.ui-tags-input input');
+    var tagsInput = document.querySelector('.ui-form-item--tags input');
 
     // initialize Tagify on the above input node reference
     new Tagify(tagsInput)

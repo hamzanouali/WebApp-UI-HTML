@@ -1,5 +1,9 @@
 @import './Inputs--simple-tags.css';
 @import './Inputs--tagging-users.css';
+/* for refactoring */
+@import './--refactoring-inputs.css';
+@import './--refactoring-tags-input.css';
+@import './--refactoring-people-tags.css';
 
 /* SETTING A DEFAULT WIDTH */
 .ui-simple-select,
@@ -9,11 +13,12 @@
 .ui-small-label-input,
 .ui-simple-tel-input,
 .ui-country-select,
-.ui-copy-input {
+.ui-copy-input,
+.ui-form-item {
   width: 300px;
 }
 
-.ui-form-input {
+.ui-form-item--people-tags {
   width: 600px;
 }
 

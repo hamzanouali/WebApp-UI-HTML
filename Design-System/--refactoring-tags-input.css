@@ -1,0 +1,86 @@
+.ui-form-item--tags .tagify {
+  align-items: center !important;
+  padding: 11px 17px 3px 17px !important;
+}
+
+.ui-form-item--tags .tagify__tag {
+  margin: 0 11px 11px 0 !important;
+  background: var(--ui-neutral-200) !important;
+  color: var(--ui-neutral-400) !important;
+  border-radius: 10rem;
+}
+
+.ui-form-item--tags .tagify__tag:last-of-type {
+  margin-right: 0 !important;
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn {
+  padding-right: 10px !important;
+  margin: 0 !important;
+}
+
+.ui-form-item--tags .tagify__tag > div {
+  padding: 6px 6px 6px 10px !important;
+}
+
+.ui-form-item--tags .tagify__tag > div::before {
+  display: none !important;
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn::before,
+.ui-form-item--tags .tagify__tag__removeBtn::after,
+.ui-form-item--tags .tagify__tag-text {
+  color: var(--ui-neutral-400) !important;
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn {
+  padding-right: 10px !important;
+  background: none !important;
+  position: relative;
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn:hover,
+.ui-form-item--tags .tagify__tag__removeBtn:focus {
+  background: none !important;
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn::before,
+.ui-form-item--tags .tagify__tag__removeBtn::after {
+  content: '' !important;
+  position: absolute;
+  left: 6px !important;
+  height: 9px;
+  width: 1px;
+  background: currentColor;
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn::before {
+  transform: rotate(45deg);
+}
+
+.ui-form-item--tags .tagify__tag__removeBtn::after {
+  transform: rotate(-45deg);
+}
+
+.ui-form-item--tags .tagify__input {
+  margin: 0 0 8px 0!important;
+  padding: 0px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.54 !important;
+}
+
+.ui-form-item--tags .tagify__tag:last-of-type ~ .tagify__input {
+  padding: 0 10px !important;
+}
+
+.ui-form-item--tags .tagify__input::before,
+.ui-form-item--tags .tagify__input:empty::before {
+  height: auto !important;
+  line-height: 1.54 !important;
+  color: var(--ui-neutral-500) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}

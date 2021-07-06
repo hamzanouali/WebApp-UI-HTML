@@ -1,0 +1,103 @@
+.ui-form-item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.ui-form-item__label {
+  width: 100%;
+  color: var(--ui-neutral-400);
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  margin-bottom: 8px;
+  transition: .2s all;
+}
+
+.ui-form-item:focus-within .ui-form-item__label {
+  color: var(--ui-primary-200);
+}
+
+.ui-form-item--small-label .ui-form-item__label {
+  width: auto;
+  position: absolute;
+  left: 17px;
+  top: -8px;
+  color: var(--ui-neutral-400);
+  background: var(--ui-white);
+  padding: 0 3px;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  margin: 0;
+  z-index: 1;
+}
+
+.ui-form-item__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-form-item__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-form-item__input::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.ui-form-item__input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.ui-form-item__input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--ui-neutral-400);
+}
+
+/* ---------------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------- */
+/* input icon group */
+
+.ui-form-item__input-icon-group {
+  width: 100%;
+  display: flex;
+  position: relative;
+  --ui-form-item__input-icon--width: 47px;
+}
+
+.ui-form-item__input-icon-group input {
+  padding-left: var(--ui-form-item__input-icon--width);
+}
+
+.ui-form-item__icon {
+  position: absolute;
+  inset: 1px;
+  right: auto;
+  color: var(--ui-neutral-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ui-form-item__input-icon--width);
+  height: 100%;
+  transition: .2s all;
+}
+
+.ui-form-item:focus-within .ui-form-item__icon,
+.ui-form-item:focus-within .ui-form-item__icon,
+.ui-form-item:focus-within .ui-form-item__icon {
+  color: var(--ui-primary-200);
+}
