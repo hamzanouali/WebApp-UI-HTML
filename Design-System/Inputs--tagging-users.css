@@ -33,3 +33,82 @@
   border: none;
   padding: 0;
 }
+
+/* --------------------------------- */
+/* Simple tags code----------------- */
+
+/* TAGS INPUT */
+
+.ui-form-input--tagging-users.ui-tags-input,
+.ui-form-input--tagging-users.ui-tags-input .tagify {
+  min-height: var(--ui-input--default-size--min-height);
+}
+
+.ui-form-input--tagging-users.ui-tags-input__input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  color: inherit;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  outline: none;
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
+}
+
+.ui-form-input--tagging-users.ui-tags-input__input:focus {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify {
+  align-items: center !important;
+  padding: 6px 17px 0px 17px !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag {
+  margin: 0 15px 6px 0 !important;
+  background: transparent !important;
+  color: var(--ui-neutral-400) !important;
+  border-radius: 10rem;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag:last-of-type {
+  margin-right: 0 !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag__removeBtn {
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag > div {
+  padding: 0 !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag > div::before {
+  display: none !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag__removeBtn {
+  display: none !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__input {
+  margin: 0 0 8px 0!important;
+  padding: 0px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  font-stretch: normal !important;
+  font-style: normal !important;
+  line-height: 1.54 !important;
+}
+
+.ui-form-input--tagging-users.ui-tags-input .tagify__tag:last-of-type ~ .tagify__input {
+  padding: 0 10px !important;
+}

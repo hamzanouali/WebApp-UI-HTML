@@ -13,6 +13,10 @@
   width: 300px;
 }
 
+.ui-form-input {
+  width: 600px;
+}
+
 /* 5. INPUTS */
 
 /* 5.1 SIMPLE-INPUT */

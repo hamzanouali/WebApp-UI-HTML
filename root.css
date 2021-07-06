@@ -64,6 +64,10 @@
   --ui-component-card-padding: 24px;
   --ui-component-card-radius: 5px;
   --ui-component-card-shadow: none;
+
+  /* 6. INPUTS VARIABLES */
+
+  --ui-input--default-size--min-height: 44px;
 }
 
 body {
