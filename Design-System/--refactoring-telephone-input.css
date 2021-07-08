@@ -1,0 +1,71 @@
+.ui-form-item--phone-number .iti--allow-dropdown:not(.iti--separate-dial-code) .ui-form-item__input {
+  padding-left: 65px !important;
+}
+
+.ui-form-item--phone-number .iti {
+  width: 100%;
+}
+
+.ui-form-item--phone-number .iti__selected-flag {
+  padding-left: 17px;
+}
+
+.ui-form-item--phone-number .iti__arrow {
+  margin-left: 8px;
+  border-top: 4px solid var(--ui-neutral-500);
+  transition: .2s all;
+}
+
+.ui-form-item--phone-number .iti__arrow--up {
+  border-bottom: none;
+  transform: rotate(-180deg);
+}
+
+.ui-form-item--phone-number .iti--separate-dial-code .iti__selected-flag,
+.ui-form-item--phone-number .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ui-neutral-400);
+}
+
+.ui-form-item--phone-number .iti__country-list {
+  box-shadow: var(--ui-shadow-300);
+  border: 1px solid var(--ui-neutral-300);
+  border-radius: 5px;
+  margin-top: 6px;
+  transform-origin: top left;
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  transition: .3s all;
+}
+
+.ui-form-item--phone-number .iti__hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ui-form-item--phone-number .iti__country {
+  padding: 11px 17px;
+  outline: 0;
+  font-size: 13px;
+  color: inherit;
+  font-weight: 500;
+}
+
+.ui-form-item--phone-number .iti__country:hover,
+.ui-form-item--phone-number .iti__country:focus,
+.ui-form-item--phone-number .iti__country.iti__highlight {
+  background: var(--ui-neutral-100);
+}
+
+.ui-form-item--phone-number .iti__country-name, .iti__flag-box {
+  margin-right: 12px;
+}
+
+.ui-form-item--phone-number .iti__divider {
+  margin: 0;
+  padding: 0;
+  border-color: var(--ui-neutral-300);
+}

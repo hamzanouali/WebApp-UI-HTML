@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Telephone Input -->
+  <!-- phone-number Input -->
   <link rel="stylesheet" href="../node_modules/intl-tel-input/build/css/intlTelInput.min.css">
 
   <!-- Tippy Tooltips -->
@@ -270,7 +270,8 @@
                 <li>
                   <h2>Search by name and email</h2>
                   <br>
-                  <div id="tagify-search-by-name-and-email" class="ui-form-item ui-form-item--tags ui-form-item--people-tags">
+                  <div id="tagify-search-by-name-and-email"
+                    class="ui-form-item ui-form-item--tags ui-form-item--people-tags">
                     <input class="ui-form-item__input" type="text" placeholder="write some names"
                       value='abatisse2@nih.gov, Justinian Hattersley'>
                   </div>
@@ -281,10 +282,10 @@
           </ol>
         </li>
         <li>
-          <h2>Telephone Input</h2>
+          <h2>phone-number Input</h2>
           <br>
-          <div id="unique-id-2" class="ui-simple-tel-input">
-            <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
+          <div id="unique-id-2" class="ui-form-item ui-form-item--phone-number">
+            <input class="ui-form-item__input" type="tel" placeholder="(201) 555-0123">
           </div>
           <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
           <script>
@@ -296,9 +297,9 @@
             });
           </script>
           <br><br>
-          <div id="unique-id-1" class="ui-simple-tel-input ui-small-label-input">
-            <label class="ui-small-label-input__label" for="input-unique-id-1">Phone number</label>
-            <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
+          <div id="unique-id-1" class="ui-form-item ui-form-item--phone-number ui-form-item--small-label">
+            <label class="ui-form-item__label" for="input-unique-id-1">Phone number</label>
+            <input class="ui-form-item__input" type="tel" placeholder="(201) 555-0123">
           </div>
           <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
           <script>
@@ -311,9 +312,9 @@
             });
           </script>
           <br><br>
-          <div id="unique-id-3" class="ui-simple-tel-input ui-normal-label-input">
-            <label class="ui-normal-label-input__label" for="input-unique-id-1">Phone number</label>
-            <input class="ui-simple-tel-input__input" type="tel" placeholder="(201) 555-0123">
+          <div id="unique-id-3" class="ui-form-item ui-form-item--phone-number">
+            <label class="ui-form-item__label" for="input-unique-id-1">Phone number</label>
+            <input class="ui-form-item__input" type="tel" placeholder="(201) 555-0123">
           </div>
           <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
           <script>
@@ -335,14 +336,14 @@
         <li>
           <h2>Simple-Select</h2>
           <br>
-          <div class="ui-simple-select">
-            <select class="ui-simple-select__select">
+          <div class="ui-form-item ui-form-item--select">
+            <select class="ui-form-item__select">
               <option disabled selected>Select country</option>
               <option value="Algeria">Algeria</option>
               <option value="Tunisia">Tunisia</option>
               <option value="Palastine">Palastine</option>
             </select>
-            <span class="ui-simple-select__icon">
+            <span class="ui-form-item__icon">
               <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
                 <path
@@ -356,16 +357,16 @@
         <li>
           <h2>Small-Label-Select</h2>
           <br>
-          <div class="ui-small-label-select">
-            <label for="unique-select-id-2" class="ui-small-label-select__label">Select Country</label>
-            <select class="ui-small-label-select__select" id="unique-select-id-2">
+          <div class="ui-form-item">
+            <label for="unique-select-id-2" class="ui-form-item__label">Select Country</label>
+            <select class="ui-form-item__select" id="unique-select-id-2">
               <option disabled selected>Africa</option>
               <option value="Algeria">Algeria</option>
               <option value="Tunisia">Tunisia</option>
               <option disabled>Asia</option>
               <option value="Palastine">Palastine</option>
             </select>
-            <span class="ui-small-label-select__icon">
+            <span class="ui-form-item__icon">
               <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
                 <path
@@ -379,9 +380,9 @@
         <li>
           <h2>Select people</h2>
           <br>
-          <div id="select-people" class="ui-tags-input ui-small-label-input">
-            <label class="ui-small-label-input__label" for="input-unique-id-1">Assign To</label>
-            <input class="ui-tags-input__input" type="text" placeholder="Username" id="input-unique-id-1">
+          <div id="select-people" class="ui-form-item ui-form-item--select">
+            <label class="ui-form-item__label" for="input-unique-id-1">Assign To</label>
+            <input class="ui-form-item__input" type="text" placeholder="Username" id="input-unique-id-1">
           </div>
           <br><br>
         </li>
