@@ -7,16 +7,17 @@
 @import './--form-item--country-select.css';
 @import './--form-item--copy-to-clipboard-inputs.css';
 @import './--form-item--switch.css';
+@import './--form-item-container.css';
+@import './--form-item--checkbox-and-radio.css';
 
-.ui-form-item:not(.ui-form-item--switch) {
+.ui-form-item:not(.ui-form-item--switch):not(.ui-form-item--checkbox) {
   width: 300px;
 }
 
-.ui-form-item--people-tags {
+.ui-form-item.ui-form-item--people-tags {
   width: 600px;
 }
 
 .ui-form-item--select {
   width: 300px;
 }
-

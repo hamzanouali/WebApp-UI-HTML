@@ -1,0 +1,64 @@
+.ui-form-item-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.ui-form-item-container__message {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  margin-top: 8px;
+}
+
+/* 1. Error */
+
+.ui-form-item-container--error .ui-form-item__label,
+.ui-form-item-container--error:focus-within .ui-form-item__label {
+  color: var(--ui-danger-200);
+}
+
+.ui-form-item-container--error .ui-form-item__input,
+.ui-form-item-container--error:focus-within .ui-form-item__input {
+  border-color: var(--ui-danger-200);
+}
+
+.ui-form-item-container--error .ui-form-item-container__message {
+  color: var(--ui-danger-200);
+}
+
+/* 2. Warning */
+
+.ui-form-item-container--warning .ui-form-item__label,
+.ui-form-item-container--warning:focus-within .ui-form-item__label {
+  color: var(--ui-warning-200);
+}
+
+.ui-form-item-container--warning .ui-form-item__input,
+.ui-form-item-container--warning:focus-within .ui-form-item__input {
+  border-color: var(--ui-warning-200);
+}
+
+.ui-form-item-container--warning .ui-form-item-container__message {
+  color: var(--ui-warning-200);
+}
+
+/* 3. Success */
+
+.ui-form-item-container--success .ui-form-item__label,
+.ui-form-item-container--success:focus-within .ui-form-item__label {
+  color: var(--ui-success-100);
+}
+
+.ui-form-item-container--success .ui-form-item__input,
+.ui-form-item-container--success:focus-within .ui-form-item__input {
+  border-color: var(--ui-success-100);
+}
+
+.ui-form-item-container--success .ui-form-item-container__message {
+  color: var(--ui-success-100);
+}

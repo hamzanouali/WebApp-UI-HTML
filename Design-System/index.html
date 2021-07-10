@@ -188,10 +188,55 @@
         <li>
           <h2>Normal-label-Input</h2>
           <br>
-          <div class="ui-normal-label-input">
-            <label class="ui-normal-label-input__label" for="input-unique-id-1">First name</label>
-            <input class="ui-normal-label-input__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+          <div class="ui-form-item">
+            <label class="ui-form-item__label" for="input-unique-id-1">First name</label>
+            <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
           </div>
+          <br><br>
+          <ol>
+            <li>
+              <h2>
+                Error case
+              </h2>
+              <br>
+              <div class="ui-form-item-container ui-form-item-container--error">
+                <div class="ui-form-item ui-form-item--small-label">
+                  <label class="ui-form-item__label" for="input-unique-id-1">First name</label>
+                  <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+                </div>
+                <span class="ui-form-item-container__message">First name is required.</span>
+              </div>
+            </li>
+            <br><br>
+            <li>
+              <h2>
+                Warning case
+              </h2>
+              <br>
+              <div class="ui-form-item-container ui-form-item-container--warning">
+                <div class="ui-form-item ui-form-item--small-label">
+                  <label class="ui-form-item__label" for="input-unique-id-1">Password</label>
+                  <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+                </div>
+                <span class="ui-form-item-container__message">Password is not strong enough.</span>
+              </div>
+            </li>
+            <br><br>
+            <li>
+              <h2>
+                Success case
+              </h2>
+              <br>
+              <div class="ui-form-item-container ui-form-item-container--success">
+                <div class="ui-form-item ui-form-item--small-label">
+                  <label class="ui-form-item__label" for="input-unique-id-1">Username</label>
+                  <input class="ui-form-item__input" type="text" placeholder="Placeholder" id="input-unique-id-1">
+                </div>
+                <span class="ui-form-item-container__message">Your username is valid.</span>
+              </div>
+            </li>
+            <br><br>
+          </ol>
           <br>
           <br>
         </li>
@@ -1020,6 +1065,24 @@
               <input name="gender" value="female" type="radio" class="ui-form-item__hidden-radio">
               <button class="ui-form-item__radio-switch-btn">Female</button>
             </div>
+          </div>
+        </li>
+      </ol>
+    </li>
+    <br>
+    <br>
+    <li>
+      <h1>
+        Checkbox and Radio
+      </h1>
+      <br><br>
+      <ol>
+        <li>
+          <h2>Checkbox</h2>
+          <br>
+          <div class="ui-form-item ui-form-item--checkbox">
+            <input id="remember-me-id" name="remember-me" type="checkbox" class="ui-form-item__checkbox">
+            <label for="remember-me-id" class="ui-form-item__label">Remember me</label>
           </div>
         </li>
       </ol>
