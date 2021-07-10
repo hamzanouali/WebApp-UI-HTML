@@ -44,25 +44,7 @@
   min-height: var(--ui-input--default-size--min-height);
 }
 
-.ui-form-item--people-tags__input {
-  width: 100%;
-  border-radius: 5px;
-  border: solid 1px var(--ui-neutral-300);
-  background-color: var(--ui-white);
-  color: inherit;
-  padding: 11px 17px;
-  font-size: 13px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.54;
-  letter-spacing: normal;
-  outline: none;
-  box-shadow: var(--ui-shadow-100);
-  transition: .2s all;
-}
-
-.ui-form-item--people-tags__input:focus {
+.ui-form-item__input:focus {
   border-color: var(--ui-primary-200);
 }
 
@@ -82,20 +64,11 @@
   margin-right: 0 !important;
 }
 
-.ui-form-item--people-tags .tagify__tag__removeBtn {
-  padding-right: 0 !important;
-  margin: 0 !important;
-}
-
 .ui-form-item--people-tags .tagify__tag > div {
   padding: 0 !important;
 }
 
 .ui-form-item--people-tags .tagify__tag > div::before {
-  display: none !important;
-}
-
-.ui-form-item--people-tags .tagify__tag__removeBtn {
   display: none !important;
 }
 
@@ -111,4 +84,8 @@
 
 .ui-form-item--people-tags .tagify__tag:last-of-type ~ .tagify__input {
   padding: 0 10px !important;
+}
+
+.ui-form-item--people-tags.ui-form-item--select .tagify__tag:last-of-type ~ .tagify__input {
+  padding: 0 !important;
 }

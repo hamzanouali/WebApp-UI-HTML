@@ -261,7 +261,7 @@
                 <li>
                   <h2>Search by name</h2>
                   <br>
-                  <div id="tagify-search-by-name" class="ui-form-item ui-form-item--people-tags">
+                  <div id="tagify-search-by-name" class="ui-form-item ui-form-item--tags ui-form-item--people-tags">
                     <input class="ui-form-item__input" type="text" placeholder="write some names"
                       value='Justinian Hattersley'>
                   </div>
@@ -382,9 +382,20 @@
         <li>
           <h2>Select people</h2>
           <br>
-          <div id="select-people" class="ui-form-item ui-form-item--select">
+          <div id="single-select-people"
+            class="ui-form-item ui-form-item--tags ui-form-item--people-tags ui-form-item--select"
+            style="width: 300px;">
             <label class="ui-form-item__label" for="input-unique-id-1">Assign To</label>
-            <input class="ui-form-item__input" type="text" placeholder="Username" id="input-unique-id-1">
+            <div class="ui-form-item__input-icon-group">
+              <input class="ui-form-item__input" type="text" placeholder="Username" id="input-unique-id-1">
+              <span class="ui-form-item__icon">
+                <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
+                  <path
+                    d="M15.9,9.3L12,13.2L8.1,9.3c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l5,5c0.2,0.2,0.5,0.2,0.6,0l5-5  c0.4-0.4,0.4-1,0-1.4l0,0C16.9,8.9,16.3,8.9,15.9,9.3z" />
+                </svg>
+              </span>
+            </div>
           </div>
           <br><br>
         </li>
@@ -412,16 +423,18 @@
         <li>
           <h2>Small Label</h2>
           <br>
-          <div class="ui-country-select ui-small-label-input">
-            <label class="ui-small-label-input__label" for="input-unique-id-5">Select Country</label>
-            <input class="ui-country-select__input" type="tel">
-            <span class="ui-small-label-select__icon">
-              <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
-                <path
-                  d="M15.9,9.3L12,13.2L8.1,9.3c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l5,5c0.2,0.2,0.5,0.2,0.6,0l5-5  c0.4-0.4,0.4-1,0-1.4l0,0C16.9,8.9,16.3,8.9,15.9,9.3z" />
-              </svg>
-            </span>
+          <div class="ui-form-item ui-form-item--country-select">
+            <label class="ui-form-item__label" for="input-unique-id-5">Select Country</label>
+            <div class="ui-form-item__input-icon-group">
+              <input class="ui-form-item__input" type="tel">
+              <span class="ui-form-item__icon">
+                <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
+                  <path
+                    d="M15.9,9.3L12,13.2L8.1,9.3c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l5,5c0.2,0.2,0.5,0.2,0.6,0l5-5  c0.4-0.4,0.4-1,0-1.4l0,0C16.9,8.9,16.3,8.9,15.9,9.3z" />
+                </svg>
+              </span>
+            </div>
           </div>
           <br><br>
         </li>
@@ -435,16 +448,18 @@
         <li>
           <h2>Small Label</h2>
           <br>
-          <div id="copy-to-clipboard" class="ui-copy-input ui-small-label-input">
-            <label for="unique-id-7" class="ui-small-label-input__label">Copy URL</label>
-            <input class="ui-copy-input__input" type="text" value="https://frontendor.com/preview/" id="unique-id-7">
-            <button class="ui-copy-input__copy-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.924" viewBox="0 0 15 14.924">
-                <path id="Tracé_2096" data-name="Tracé 2096"
-                  d="M11.612,1.818V2.824h1.581v0a1.8,1.8,0,0,1,1.278.534A1.818,1.818,0,0,1,15,4.639h0v8.467h0a1.822,1.822,0,0,1-.531,1.284,1.8,1.8,0,0,1-1.272.53v0h-8v0a1.812,1.812,0,0,1-1.8-1.812h0V12.046H1.807v0A1.812,1.812,0,0,1,0,10.23H0V1.818H0A1.823,1.823,0,0,1,.534.533,1.8,1.8,0,0,1,1.806,0V0h8V0a1.8,1.8,0,0,1,1.278.534,1.818,1.818,0,0,1,.527,1.279h0v0ZM10.241,2.824V1.815h0a.446.446,0,0,0-.438-.439v0h-8v0a.435.435,0,0,0-.307.132.441.441,0,0,0-.13.309h0V10.23h0a.446.446,0,0,0,.438.439v0H3.389V4.642h0a1.823,1.823,0,0,1,.531-1.284A1.8,1.8,0,0,1,5.2,2.827v0h5.045Zm3.387,10.282V4.639h0a.446.446,0,0,0-.438-.439v0h-8v0a.435.435,0,0,0-.307.132.441.441,0,0,0-.13.309h0v8.467h0a.446.446,0,0,0,.438.439v0h8v0a.435.435,0,0,0,.307-.132.441.441,0,0,0,.13-.309h0Z"
-                  fill="currentColor" fill-rule="evenodd" />
-              </svg>
-            </button>
+          <div id="copy-to-clipboard" class="ui-form-item ui-form-item--copy-to-clipboard">
+            <label for="unique-id-7" class="ui-form-item__label">Copy URL</label>
+            <div class="ui-form-item__input-icon-group">
+              <input class="ui-form-item__input" type="text" value="https://frontendor.com/preview/" id="unique-id-7">
+              <button class="ui-form-item__copy-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.924" viewBox="0 0 15 14.924">
+                  <path id="Tracé_2096" data-name="Tracé 2096"
+                    d="M11.612,1.818V2.824h1.581v0a1.8,1.8,0,0,1,1.278.534A1.818,1.818,0,0,1,15,4.639h0v8.467h0a1.822,1.822,0,0,1-.531,1.284,1.8,1.8,0,0,1-1.272.53v0h-8v0a1.812,1.812,0,0,1-1.8-1.812h0V12.046H1.807v0A1.812,1.812,0,0,1,0,10.23H0V1.818H0A1.823,1.823,0,0,1,.534.533,1.8,1.8,0,0,1,1.806,0V0h8V0a1.8,1.8,0,0,1,1.278.534,1.818,1.818,0,0,1,.527,1.279h0v0ZM10.241,2.824V1.815h0a.446.446,0,0,0-.438-.439v0h-8v0a.435.435,0,0,0-.307.132.441.441,0,0,0-.13.309h0V10.23h0a.446.446,0,0,0,.438.439v0H3.389V4.642h0a1.823,1.823,0,0,1,.531-1.284A1.8,1.8,0,0,1,5.2,2.827v0h5.045Zm3.387,10.282V4.639h0a.446.446,0,0,0-.438-.439v0h-8v0a.435.435,0,0,0-.307.132.441.441,0,0,0-.13.309h0v8.467h0a.446.446,0,0,0,.438.439v0h8v0a.435.435,0,0,0,.307-.132.441.441,0,0,0,.13-.309h0Z"
+                    fill="currentColor" fill-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
           <br>
         </li>
@@ -1002,10 +1017,10 @@
   <script>
     document.querySelector('#copy-to-clipboard input').addEventListener('focus', function (focusEvent) {
       focusEvent.target.select();
-      document.querySelector('#copy-to-clipboard .ui-copy-input__copy-btn').click();
+      document.querySelector('#copy-to-clipboard button').click();
       copyTextToClipboard(focusEvent.target.value);
     })
-    tippy('#copy-to-clipboard .ui-copy-input__copy-btn', {
+    tippy('#copy-to-clipboard button', {
       content: 'Copied!',
       trigger: 'click',
       animation: 'perspective',
@@ -1117,12 +1132,13 @@
           tabIndex="-1"
           class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ""}"
           ${this.getAttributes(tagData)}>
-            <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
             <div class="ui-avatar-info">
-                <div class="ui-avatar ui-avatar--very-small">
-                  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
-                </div>
-                <span class='tagify__tag-text'>${tagData.name}</span>
+              <div class="ui-avatar ui-avatar--very-small">
+                <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
+              </div>
+              <div class="ui-avatar-info__text-container">
+                <span class="ui-avatar-info__primary-text">${tagData.name}</span>
+              </div>
             </div>
         </tag>
         `
@@ -1253,21 +1269,21 @@
 
     function tagTemplate(tagData) {
       return `
-          <tag title="${(tagData.title || tagData.email)}"
-                  contenteditable='false'
-                  spellcheck='false'
-                  tabIndex="-1"
-                  class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ""}"
-                  ${this.getAttributes(tagData)}>
-              <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
-              <div class="ui-avatar-info">
-                  <div class="ui-avatar ui-avatar--very-small">
-                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
-                  </div>
-                  <span class='tagify__tag-text'>${tagData.name}</span>
+        <tag title="${(tagData.title)}"
+          contenteditable='false'
+          spellcheck='false'
+          tabIndex="-1"
+          class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ""}"
+          ${this.getAttributes(tagData)}>
+            <div class="ui-avatar-info">
+              <div class="ui-avatar ui-avatar--very-small">
+                <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
               </div>
-          </tag>
-          `
+              <div class="ui-avatar-info__text-container">
+                <span class="ui-avatar-info__primary-text">${tagData.name}</span>
+              </div>
+            </div>
+        </tag>`
     }
 
     function suggestionItemTemplate(tagData) {
@@ -1359,7 +1375,7 @@
   </script>
 
   <script>
-    var inputElm = document.querySelector('#select-people input');
+    var inputElm = document.querySelector('#single-select-people input');
 
     var usersList = [
       {
@@ -1397,12 +1413,15 @@
             tabIndex="-1"
             class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ""}"
             ${this.getAttributes(tagData)}>
-              <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
               <div class="ui-avatar-info">
-                  <div class="ui-avatar ui-avatar--very-small">
-                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
-                  </div>
-                  <span class='tagify__tag-text'>${tagData.name}</span>
+                ${tagData.avatar ? `
+                <div class="ui-avatar ui-avatar--very-small">
+                  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}" class="ui-avatar__img">
+                </div>
+                ` : ''}
+                <div class="ui-avatar-info__text-container">
+                  <span class="ui-avatar-info__primary-text">${tagData.name}</span>
+                </div>
               </div>
           </tag>
           `
@@ -1432,12 +1451,10 @@
     var usersTagify = new Tagify(inputElm, {
       mode: 'select',
       tagTextProp: 'name', // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+      autoComplete: { enabled: true },
       enforceWhitelist: true,
       skipInvalid: true, // do not remporarily add invalid tags
       dropdown: {
-        closeOnSelect: false,
-        enabled: 0,
-        classname: 'users-list',
         searchKeys: ['name']  // very important to set by which keys to search for suggesttions when typing
       },
       templates: {
@@ -1447,41 +1464,8 @@
       whitelist: usersList
     })
 
-    usersTagify.on('dropdown:show dropdown:updated', onDropdownShow)
-    usersTagify.on('dropdown:select', onSelectSuggestion)
     usersTagify.on('focus', preventBrowserExtensions)
     usersTagify.on('keydown', preventBrowserExtensions)
-
-    var addAllSuggestionsElm;
-
-    function onDropdownShow(e) {
-      var dropdownContentElm = e.detail.tagify.DOM.dropdown.content;
-
-      if (usersTagify.suggestedListItems.length > 1) {
-        addAllSuggestionsElm = getAddAllSuggestionsElm();
-
-        // insert "addAllSuggestionsElm" as the first element in the suggestions list
-        dropdownContentElm.insertBefore(addAllSuggestionsElm, dropdownContentElm.firstChild)
-      }
-    }
-
-    function onSelectSuggestion(e) {
-      if (e.detail.elm == addAllSuggestionsElm)
-        usersTagify.dropdown.selectAll.call(usersTagify);
-    }
-
-    // create a "add all" custom suggestion element every time the dropdown changes
-    function getAddAllSuggestionsElm() {
-      // suggestions items should be based on "dropdownItem" template
-      return usersTagify.parseTemplate('dropdownItem', [{
-        class: "addAll",
-        name: "Add all",
-        email: usersTagify.settings.whitelist.reduce(function (remainingSuggestions, item) {
-          return usersTagify.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1
-        }, 0) + " Members"
-      }]
-      )
-    }
 
     function preventBrowserExtensions(e) {
       var inputContainer = inputElm.parentNode;

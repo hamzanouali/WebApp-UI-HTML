@@ -1,3 +1,23 @@
+.ui-form-item--country-select .ui-form-item__icon {
+  width: auto;
+  height: auto;
+  position: absolute;
+  inset: 1px;
+  left: auto;
+  color: var(--ui-neutral-400);
+  background: var(--ui-white);
+  padding: 11px 17px 11px 0;
+  border-radius: 5px;
+  color: inherit;
+  pointer-events: none;
+  line-height: 1.7;
+  transition: .2s all;
+}
+
+.ui-form-item--country-select:focus-within .ui-form-item__icon {
+  color: var(--ui-primary-200);
+}
+
 .ui-form-item--country-select .iti--allow-dropdown:not(.iti--separate-dial-code) .ui-form-item__input {
   padding-left: 47px !important;
 }

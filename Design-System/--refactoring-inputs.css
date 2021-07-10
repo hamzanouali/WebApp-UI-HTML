@@ -96,8 +96,6 @@
   transition: .2s all;
 }
 
-.ui-form-item:focus-within .ui-form-item__icon,
-.ui-form-item:focus-within .ui-form-item__icon,
 .ui-form-item:focus-within .ui-form-item__icon {
   color: var(--ui-primary-200);
 }

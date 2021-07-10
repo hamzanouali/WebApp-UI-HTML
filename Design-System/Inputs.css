@@ -7,6 +7,7 @@
 @import './--refactoring-telephone-input.css';
 @import './--refactoring-select.css';
 @import './--refactoring-country-select.css';
+@import './--refactoring-copy-to-clipboard-inputs.css';
 
 /* SETTING A DEFAULT WIDTH */
 .ui-simple-select,
