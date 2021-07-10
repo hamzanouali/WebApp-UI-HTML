@@ -4,6 +4,7 @@
 @import './Design-System/Inputs.css';
 @import './Design-System/Typography.css';
 @import './Design-System/Checkmark.css';
+@import './Design-System/Switch.css';
 
 :root {
   /* 1. COLORS ==============  */
