@@ -357,22 +357,24 @@
         <li>
           <h2>Small-Label-Select</h2>
           <br>
-          <div class="ui-form-item">
+          <div class="ui-form-item ui-form-item--select">
             <label for="unique-select-id-2" class="ui-form-item__label">Select Country</label>
-            <select class="ui-form-item__select" id="unique-select-id-2">
-              <option disabled selected>Africa</option>
-              <option value="Algeria">Algeria</option>
-              <option value="Tunisia">Tunisia</option>
-              <option disabled>Asia</option>
-              <option value="Palastine">Palastine</option>
-            </select>
-            <span class="ui-form-item__icon">
-              <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
-                <path
-                  d="M15.9,9.3L12,13.2L8.1,9.3c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l5,5c0.2,0.2,0.5,0.2,0.6,0l5-5  c0.4-0.4,0.4-1,0-1.4l0,0C16.9,8.9,16.3,8.9,15.9,9.3z" />
-              </svg>
-            </span>
+            <div class="ui-form-item__input-icon-group">
+              <select class="ui-form-item__select" id="unique-select-id-2">
+                <option disabled selected>Africa</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Tunisia">Tunisia</option>
+                <option disabled>Asia</option>
+                <option value="Palastine">Palastine</option>
+              </select>
+              <span class="ui-form-item__icon">
+                <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
+                  <path
+                    d="M15.9,9.3L12,13.2L8.1,9.3c-0.4-0.4-1-0.4-1.4,0l0,0c-0.4,0.4-0.4,1,0,1.4l5,5c0.2,0.2,0.5,0.2,0.6,0l5-5  c0.4-0.4,0.4-1,0-1.4l0,0C16.9,8.9,16.3,8.9,15.9,9.3z" />
+                </svg>
+              </span>
+            </div>
           </div>
           <br>
           <br>
@@ -395,9 +397,9 @@
         <li>
           <h2>No Label</h2>
           <br>
-          <div class="ui-country-select">
-            <input class="ui-country-select__input" type="tel">
-            <span class="ui-small-label-select__icon">
+          <div class="ui-form-item ui-form-item--country-select">
+            <input class="ui-form-item__input" type="tel">
+            <span class="ui-form-item__icon">
               <svg width="1em" height="1em" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
                 <path
@@ -1045,7 +1047,7 @@
   </script>
   <script src="../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
   <script>
-    document.querySelectorAll('.ui-country-select input').forEach(function (countrySelectInput) {
+    document.querySelectorAll('.ui-form-item--country-select input').forEach(function (countrySelectInput) {
       window.intlTelInput(countrySelectInput, {
         preferredCountries: [],
         autoPlaceholder: false,

@@ -21,8 +21,10 @@
   border-color: var(--ui-primary-200);
 }
 
-.ui-form-item__icon {
+.ui-form-item--select .ui-form-item__icon {
   position: absolute;
+  height: auto;
+  width: auto;
   inset: 1px;
   left: auto;
   color: var(--ui-neutral-400);

@@ -1,0 +1,87 @@
+.ui-form-item--country-select .iti--allow-dropdown:not(.iti--separate-dial-code) .ui-form-item__input {
+  padding-left: 47px !important;
+}
+
+.ui-form-item--country-select:focus-within .ui-form-item__input {
+  border-color: var(--ui-primary-200);
+}
+
+.ui-form-item--country-select .iti {
+  width: 100%;
+}
+
+.ui-form-item--country-select .iti__flag-container {
+  right: 0;
+  width: 100%;
+}
+
+.ui-form-item--country-select .iti__selected-flag {
+  padding-left: 17px;
+  outline: none;
+}
+
+.ui-form-item--country-select .iti__arrow {
+  display: none;
+}
+
+.ui-form-item--country-select .iti--separate-dial-code .iti__selected-flag,
+.ui-form-item--country-select .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ui-neutral-400);
+}
+
+.ui-form-item--country-select .iti__dial-code,
+.ui-form-item__country-list .iti__dial-code {
+  display: none;
+}
+
+.ui-form-item--country-select .iti__flag-container {
+  right: 0;
+  width: 100%;
+}
+
+.ui-form-item--country-select .iti__country-list {
+  box-shadow: var(--ui-shadow-300);
+  border: 1px solid var(--ui-neutral-300);
+  border-radius: 5px;
+  margin-top: 6px;
+  transform-origin: top left;
+  width: 100%;
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  transition: .3s all;
+}
+
+.ui-form-item--country-select .iti__hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ui-form-item--country-select .iti__country {
+  padding: 11px 17px;
+  outline: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: inherit;
+  font-weight: 500;
+  white-space: break-spaces;
+}
+
+.ui-form-item--country-select .iti__country:hover,
+.ui-form-item--country-select .iti__country:focus,
+.ui-form-item--country-select .iti__country.iti__highlight {
+  background: var(--ui-neutral-100);
+}
+
+.ui-form-item--country-select .iti__country-name, .iti__flag-box {
+  margin-right: 11px !important;
+}
+
+.ui-form-item--country-select .iti__divider {
+  margin: 0;
+  padding: 0;
+  border-color: var(--ui-neutral-300);
+}

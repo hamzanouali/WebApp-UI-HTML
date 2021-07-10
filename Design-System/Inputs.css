@@ -6,6 +6,7 @@
 @import './--refactoring-people-tags.css';
 @import './--refactoring-telephone-input.css';
 @import './--refactoring-select.css';
+@import './--refactoring-country-select.css';
 
 /* SETTING A DEFAULT WIDTH */
 .ui-simple-select,
