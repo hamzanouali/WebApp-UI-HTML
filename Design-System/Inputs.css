@@ -8,7 +8,8 @@
 @import './--form-item--copy-to-clipboard-inputs.css';
 @import './--form-item--switch.css';
 @import './--form-item-container.css';
-@import './--form-item--checkbox-and-radio.css';
+@import './--form-item--checkbox.css';
+@import './--form-item--radio.css';
 
 .ui-form-item:not(.ui-form-item--switch):not(.ui-form-item--checkbox) {
   width: 300px;
