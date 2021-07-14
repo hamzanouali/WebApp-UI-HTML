@@ -6,7 +6,7 @@
 .ui-form-item--checkbox .ui-form-item__label {
   width: auto;
   margin: 0 0 0 11px;
-  line-height: 1;
+  line-height: 1.17;
   cursor: pointer;
 }
 
@@ -24,6 +24,20 @@
   width: 14px;
   height: 14px;
   cursor: pointer;
+  z-index: 0;
+}
+
+.ui-form-item__checkbox::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 5px;
+  border: solid 1px var(--ui-neutral-300);
+  background-color: var(--ui-white);
+  box-shadow: var(--ui-shadow-100);
+  transition: .2s all;
 }
 
 .ui-form-item__checkbox__input {
@@ -35,46 +49,30 @@
   height: calc(100% + 4px);
   cursor: pointer;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
-.ui-form-item__checkbox__square:before,
-.ui-form-item__checkbox__square:after {
-  content: '';
+.ui-form-item__checkbox__svg {
   position: absolute;
-}
-
-.ui-form-item__checkbox__square:before {
-  inset: -2px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  border-radius: 5px;
-  border: solid 1px var(--ui-neutral-300);
-  background-color: var(--ui-white);
-  box-shadow: var(--ui-shadow-100);
-  transition: .2s all;
-}
-
-.ui-form-item__checkbox__input:checked ~ .ui-form-item__checkbox__square::before {
-  background: var(--ui-primary-200);
-  border-color:  var(--ui-primary-200);
-}
-
-.ui-form-item__checkbox__square::after {
-  position: absolute;
-  margin: 39% 22.5%;
   inset: 0;
   top: -2px;
-  height: 30%;
-  width: 55%;
-  border-left: 1px solid;
-  border-bottom: 1px solid;
-  border-color: var(--ui-white);
-  transform: rotate(-45deg);
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 5px;
+  z-index: 1;
   transition: .2s all;
   opacity: 0;
 }
 
-.ui-form-item__checkbox__input:checked ~ .ui-form-item__checkbox__square::after {
+.ui-form-item__checkbox__svg path:nth-child(1) {
+  fill: var(--ui-primary-200);
+}
+
+.ui-form-item__checkbox__svg path:nth-child(2) {
+  fill: var(--ui-primary-200__invert);
+}
+
+.ui-form-item__checkbox__input:checked ~ .ui-form-item__checkbox__svg {
   opacity: 1;
 }
